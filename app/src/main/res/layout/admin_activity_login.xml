@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mapsActivityConstraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/courier_img"
+    tools:context=".admin.activities.AdminLoginActivity">
+
+    <Button
+        android:id="@+id/buttonAdminBack"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="@color/gray"
+        android:fontFamily="@font/lato"
+        android:outlineProvider="paddedBounds"
+        android:text="@string/adminlogintext3"
+        android:textSize="18sp"
+        app:cornerRadius="11dp"
+        app:layout_constraintEnd_toEndOf="@+id/buttonAdminAdminLogin"
+        app:layout_constraintStart_toStartOf="@+id/buttonAdminAdminLogin"
+        app:layout_constraintTop_toBottomOf="@+id/buttonAdminAdminLogin" />
+
+    <Button
+        android:id="@+id/buttonAdminAdminLogin"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:backgroundTint="@color/scarlet"
+        android:fontFamily="@font/lato"
+        android:outlineProvider="paddedBounds"
+        android:text="@string/logintext2"
+        android:textSize="18sp"
+        app:cornerRadius="11dp"
+        app:layout_constraintEnd_toEndOf="@+id/editTextEmail3"
+        app:layout_constraintStart_toStartOf="@+id/editTextEmail3"
+        app:layout_constraintTop_toBottomOf="@+id/editTextEmail3" />
+
+    <EditText
+        android:id="@+id/editTextEmail3"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
+        android:background="@drawable/edit_text_border"
+        android:backgroundTint="@color/scarlet"
+        android:ems="10"
+        android:fontFamily="@font/lato"
+        android:hint="@string/text5"
+        android:inputType="textEmailAddress"
+        android:padding="12dp"
+        android:textColor="@color/scarlet"
+        android:textColorHint="@color/lightred"
+        app:layout_constraintEnd_toEndOf="@+id/textView12"
+        app:layout_constraintStart_toStartOf="@+id/textView14"
+        app:layout_constraintTop_toBottomOf="@+id/textView14" />
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/lato"
+        android:text="@string/adminlogintext2"
+        android:textColor="@color/scarlet"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/textView13"
+        app:layout_constraintStart_toStartOf="@+id/textView13"
+        app:layout_constraintTop_toBottomOf="@+id/textView13" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="18dp"
+        android:fontFamily="@font/lato"
+        android:text="@string/adminlogintext1"
+        android:textAlignment="center"
+        android:textColor="@color/orange_premium"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView4" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_logo" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="18dp"
+        android:fontFamily="@font/lato_regular"
+        android:letterSpacing="0.04"
+        android:text="@string/main1text1"
+        android:textColor="@color/marine"
+        android:textSize="23sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/imageView4"
+        app:layout_constraintTop_toTopOf="@+id/imageView4"
+        app:layout_constraintVertical_bias="0.513" />
+</androidx.constraintlayout.widget.ConstraintLayout>

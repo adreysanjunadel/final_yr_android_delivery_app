@@ -1,0 +1,430 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nested_scroll"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:backgroundTint="@color/marine"
+    android:fillViewport="true"
+    tools:context=".user.profile.UserProfileFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/userProfileFragmentConstraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/cover_blue"
+        android:fitsSystemWindows="true"
+        tools:context=".user.profile.UserProfileFragment">
+
+        <!-- TODO: Update blank fragment layout -->
+
+        <Button
+            android:id="@+id/blockUserButton"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="40dp"
+            android:backgroundTint="@color/orange_premium"
+            android:fontFamily="@font/lato"
+            android:text="@string/admin_user_management_block_user"
+            android:textSize="18sp"
+            app:cornerRadius="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/profileAddressConstraintLayout" />
+
+        <ImageView
+            android:id="@+id/addressDetailsCollapsible"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="@+id/textView38"
+            app:layout_constraintEnd_toEndOf="@+id/userDetailsCollapsible"
+            app:layout_constraintStart_toEndOf="@+id/textView38"
+            app:layout_constraintTop_toTopOf="@+id/textView38"
+            app:srcCompat="@drawable/ic_arrow_up" />
+
+        <TextView
+            android:id="@+id/textView38"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="32dp"
+            android:fontFamily="@font/lato"
+            android:text="@string/user_address_details"
+            android:textSize="22sp"
+            app:layout_constraintEnd_toEndOf="@+id/userAccountTextView"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/userAccountTextView"
+            app:layout_constraintTop_toBottomOf="@+id/profilePersonalConstraintLayout" />
+
+        <TextView
+            android:id="@+id/userAccountPersonalDetailsTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="32dp"
+            android:fontFamily="@font/lato"
+            android:text="@string/user_profile_details"
+            android:textSize="22sp"
+            app:layout_constraintEnd_toEndOf="@+id/userAccountTextView"
+            app:layout_constraintStart_toStartOf="@+id/userAccountTextView"
+            app:layout_constraintTop_toBottomOf="@+id/userAccountTextView" />
+
+        <ImageView
+            android:id="@+id/userDetailsCollapsible"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintBottom_toBottomOf="@+id/userAccountPersonalDetailsTextView"
+            app:layout_constraintEnd_toEndOf="@+id/userAccountTextView"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/userAccountPersonalDetailsTextView"
+            app:layout_constraintTop_toTopOf="@+id/userAccountPersonalDetailsTextView"
+            app:layout_constraintVertical_bias="1.0"
+            app:srcCompat="@drawable/ic_arrow_up" />
+
+        <TextView
+            android:id="@+id/userAccountTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:fontFamily="@font/lato"
+            android:text="@string/user_profile"
+            android:textSize="24sp"
+            android:textStyle="bold|italic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/profilePersonalFillConstraint"
+            android:layout_width="0dp"
+            android:layout_height="32dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/userAccountPersonalDetailsTextView">
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/profilePersonalConstraintLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/profilePersonalFillConstraint">
+
+            <ImageView
+                android:id="@+id/userProfileImageView"
+                android:layout_width="92dp"
+                android:layout_height="92dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_menu_profile" />
+
+            <EditText
+                android:id="@+id/userAccountPersonalDetailsFnameEditText"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="40dp"
+                android:background="@drawable/edit_text_border"
+                android:backgroundTint="@color/marine"
+                android:ems="10"
+                android:fontFamily="@font/lato"
+                android:hint="@string/text1"
+                android:inputType="text"
+                android:padding="12dp"
+                android:textColor="@color/marine"
+                android:textColorHint="@color/lighterblue"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/userProfileImageView" />
+
+            <EditText
+                android:id="@+id/userAccountPersonalDetailsLnameEditText"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/edit_text_border"
+                android:backgroundTint="@color/marine"
+                android:ems="10"
+                android:fontFamily="@font/lato"
+                android:hint="@string/text2"
+                android:inputType="text"
+                android:padding="12dp"
+                android:textColor="@color/marine"
+                android:textColorHint="@color/lighterblue"
+                app:layout_constraintEnd_toEndOf="@+id/userAccountPersonalDetailsFnameEditText"
+                app:layout_constraintStart_toStartOf="@+id/userAccountPersonalDetailsFnameEditText"
+                app:layout_constraintTop_toBottomOf="@+id/userAccountPersonalDetailsFnameEditText" />
+
+            <EditText
+                android:id="@+id/userAccountPersonalDetailsMobileEditText"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/edit_text_border"
+                android:backgroundTint="@color/marine"
+                android:ems="10"
+                android:fontFamily="@font/lato"
+                android:hint="@string/text3"
+                android:inputType="phone"
+                android:padding="12dp"
+                android:textColor="@color/marine"
+                android:textColorHint="@color/lighterblue"
+                app:layout_constraintEnd_toEndOf="@+id/userAccountPersonalDetailsLnameEditText"
+                app:layout_constraintStart_toStartOf="@+id/userAccountPersonalDetailsLnameEditText"
+                app:layout_constraintTop_toBottomOf="@+id/userAccountPersonalDetailsLnameEditText" />
+
+            <EditText
+                android:id="@+id/userAccountPersonalDetailsNICEditText"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/edit_text_border"
+                android:backgroundTint="@color/marine"
+                android:ems="10"
+                android:fontFamily="@font/lato"
+                android:hint="@string/text4"
+                android:inputType="text"
+                android:padding="12dp"
+                android:textColor="@color/marine"
+                android:textColorHint="@color/lighterblue"
+                app:layout_constraintEnd_toEndOf="@+id/userAccountPersonalDetailsMobileEditText"
+                app:layout_constraintStart_toStartOf="@+id/userAccountPersonalDetailsMobileEditText"
+                app:layout_constraintTop_toBottomOf="@+id/userAccountPersonalDetailsMobileEditText" />
+
+            <EditText
+                android:id="@+id/userAccountPersonalDetailsEmailEditText"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/edit_text_border"
+                android:backgroundTint="@color/marine"
+                android:ems="10"
+                android:fontFamily="@font/lato"
+                android:hint="@string/text5"
+                android:inputType="textEmailAddress"
+                android:padding="12dp"
+                android:textColor="@color/marine"
+                android:textColorHint="@color/lighterblue"
+                app:layout_constraintEnd_toEndOf="@+id/userAccountPersonalDetailsNICEditText"
+                app:layout_constraintStart_toStartOf="@+id/userAccountPersonalDetailsNICEditText"
+                app:layout_constraintTop_toBottomOf="@+id/userAccountPersonalDetailsNICEditText" />
+
+            <Button
+                android:id="@+id/saveUserDetailsButton"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="16dp"
+                android:backgroundTint="@color/bluegreen"
+                android:fontFamily="@font/lato"
+                android:text="@string/admin_user_management_new_user"
+                android:textSize="18sp"
+                app:cornerRadius="8dp"
+                app:layout_constraintEnd_toEndOf="@+id/userAccountPersonalDetailsEmailEditText"
+                app:layout_constraintStart_toStartOf="@+id/userAccountPersonalDetailsEmailEditText"
+                app:layout_constraintTop_toBottomOf="@+id/userProfileJoinedDateTimeValueTextView" />
+
+            <TextView
+                android:id="@+id/userProfileJoinedDateTimeTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="6dp"
+                android:fontFamily="@font/lato"
+                android:text="@string/nonexisting_joineddatetime"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toStartOf="@+id/userProfileJoinedDateTimeValueTextView"
+                app:layout_constraintStart_toStartOf="@+id/userAccountPersonalDetailsEmailEditText"
+                app:layout_constraintTop_toBottomOf="@+id/userAccountPersonalDetailsEmailEditText" />
+
+            <TextView
+                android:id="@+id/userProfileJoinedDateTimeValueTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:layout_marginEnd="12dp"
+                android:fontFamily="@font/lato"
+                android:text="@string/existing_datetime"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="@+id/userProfileJoinedDateTimeTextView"
+                app:layout_constraintEnd_toEndOf="@+id/userAccountPersonalDetailsEmailEditText"
+                app:layout_constraintStart_toEndOf="@+id/userProfileJoinedDateTimeTextView"
+                app:layout_constraintTop_toTopOf="@+id/userProfileJoinedDateTimeTextView" />
+
+            <Button
+                android:id="@+id/updateUserDetailsButton"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="72dp"
+                android:layout_marginBottom="8dp"
+                android:backgroundTint="@color/marine"
+                android:fontFamily="@font/lato"
+                android:text="@string/admin_user_management_update_user"
+                android:textSize="18sp"
+                app:cornerRadius="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/userAccountPersonalDetailsEmailEditText"
+                app:layout_constraintStart_toStartOf="@+id/userAccountPersonalDetailsEmailEditText"
+                app:layout_constraintTop_toBottomOf="@+id/userProfileJoinedDateTimeValueTextView" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/profileAddressFillConstraintLayout"
+            android:layout_width="0dp"
+            android:layout_height="32dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/addressDetailsCollapsible">
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/profileAddressConstraintLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/profileAddressFillConstraintLayout">
+
+            <EditText
+                android:id="@+id/editTextAddressNo"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="40dp"
+                android:layout_marginEnd="40dp"
+                android:background="@drawable/edit_text_border"
+                android:backgroundTint="@color/bluegreen"
+                android:ems="10"
+                android:fontFamily="@font/lato"
+                android:hint="@string/address_no"
+                android:padding="12dp"
+                android:textColor="@color/bluegreen"
+                android:textColorHint="@color/lightbluegreen"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/editTextAddressStreet1"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/edit_text_border"
+                android:backgroundTint="@color/bluegreen"
+                android:ems="10"
+                android:fontFamily="@font/lato"
+                android:hint="@string/address_street1"
+                android:padding="12dp"
+                android:textColor="@color/bluegreen"
+                android:textColorHint="@color/lightbluegreen"
+                app:layout_constraintEnd_toEndOf="@+id/editTextAddressNo"
+                app:layout_constraintStart_toStartOf="@+id/editTextAddressNo"
+                app:layout_constraintTop_toBottomOf="@+id/editTextAddressNo" />
+
+            <EditText
+                android:id="@+id/editTextAddressStreet2"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/edit_text_border"
+                android:backgroundTint="@color/bluegreen"
+                android:ems="10"
+                android:fontFamily="@font/lato"
+                android:hint="@string/address_street2"
+                android:padding="12dp"
+                android:textColor="@color/bluegreen"
+                android:textColorHint="@color/lightbluegreen"
+                app:layout_constraintEnd_toEndOf="@+id/editTextAddressStreet1"
+                app:layout_constraintStart_toStartOf="@+id/editTextAddressStreet1"
+                app:layout_constraintTop_toBottomOf="@+id/editTextAddressStreet1" />
+
+            <Spinner
+                android:id="@+id/provinceSpinner"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/edit_text_border"
+                android:backgroundTint="@color/bluegreen"
+                app:layout_constraintEnd_toEndOf="@+id/editTextAddressStreet2"
+                app:layout_constraintStart_toStartOf="@+id/editTextAddressStreet2"
+                app:layout_constraintTop_toBottomOf="@+id/editTextAddressStreet2" />
+
+            <Spinner
+                android:id="@+id/citySpinner"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/edit_text_border"
+                android:backgroundTint="@color/bluegreen"
+                app:layout_constraintEnd_toEndOf="@+id/editTextAddressStreet2"
+                app:layout_constraintStart_toStartOf="@+id/editTextAddressStreet2"
+                app:layout_constraintTop_toBottomOf="@+id/provinceSpinner" />
+
+            <Button
+                android:id="@+id/saveUserAddressDetailsButton"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="16dp"
+                android:backgroundTint="@color/bluegreen"
+                android:fontFamily="@font/lato"
+                android:text="@string/admin_user_management_user_address_create"
+                android:textSize="18sp"
+                app:cornerRadius="8dp"
+                app:layout_constraintEnd_toEndOf="@+id/editTextAddressStreet2"
+                app:layout_constraintStart_toStartOf="@+id/editTextAddressStreet2"
+                app:layout_constraintTop_toBottomOf="@+id/citySpinner" />
+
+            <Button
+                android:id="@+id/updateUserAddressButton"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="72dp"
+                android:backgroundTint="@color/marine"
+                android:fontFamily="@font/lato"
+                android:text="@string/admin_user_management_user_address_update"
+                android:textSize="18sp"
+                app:cornerRadius="8dp"
+                app:layout_constraintEnd_toEndOf="@+id/editTextAddressStreet2"
+                app:layout_constraintStart_toStartOf="@+id/editTextAddressStreet2"
+                app:layout_constraintTop_toBottomOf="@+id/citySpinner" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <Button
+            android:id="@+id/deleteUserButton"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="8dp"
+            android:backgroundTint="@color/scarlet"
+            android:fontFamily="@font/lato"
+            android:text="@string/admin_user_management_delete_user"
+            android:textSize="18sp"
+            app:cornerRadius="8dp"
+            app:layout_constraintEnd_toEndOf="@+id/blockUserButton"
+            app:layout_constraintStart_toStartOf="@+id/blockUserButton"
+            app:layout_constraintTop_toBottomOf="@+id/blockUserButton" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/userProfileBottomConstraint"
+            android:layout_width="0dp"
+            android:layout_height="32dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

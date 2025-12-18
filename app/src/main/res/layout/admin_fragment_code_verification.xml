@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/adminCodeVerificationConstraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/cover_blue"
+    tools:context=".admin.fragments.AdminCodeVerificationFragment">
+
+    <Button
+        android:id="@+id/buttonAdminVerify"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:layout_marginBottom="96dp"
+        android:backgroundTint="@color/marine"
+        android:fontFamily="@font/lato"
+        android:outlineProvider="paddedBounds"
+        android:text="@string/verifytext6"
+        android:textSize="18sp"
+        app:cornerRadius="11dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/adminCodeVerificationEditText"
+        app:layout_constraintStart_toStartOf="@+id/adminCodeVerificationEditText"
+        app:layout_constraintTop_toBottomOf="@+id/adminCodeVerificationEditText" />
+
+    <TextView
+        android:id="@+id/textView19"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="18dp"
+        android:fontFamily="@font/lato"
+        android:minLines="2"
+        android:text="@string/verifytext4"
+        android:textAlignment="center"
+        android:textColor="@color/orange_premium"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/adminCodeVerificationEditText"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="24dp"
+        android:background="@drawable/edit_text_border"
+        android:backgroundTint="@color/marine"
+        android:ems="10"
+        android:fontFamily="@font/lato"
+        android:hint="@string/verifytext5"
+        android:inputType="text"
+        android:padding="12dp"
+        android:textColor="@color/marine"
+        android:textColorHint="@color/lighterblue"
+        app:layout_constraintEnd_toEndOf="@+id/textView19"
+        app:layout_constraintStart_toStartOf="@+id/textView19"
+        app:layout_constraintTop_toBottomOf="@+id/textView19" />
+</androidx.constraintlayout.widget.ConstraintLayout>

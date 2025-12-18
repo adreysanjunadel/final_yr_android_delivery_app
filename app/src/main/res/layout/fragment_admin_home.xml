@@ -1,0 +1,583 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nested_scroll_admin_fragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".admin.home.AdminHomeFragment">
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/fragmentAdminHomeConstraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/cover_blue"
+    tools:context=".admin.home.AdminHomeFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:id="@+id/adminHomeTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
+        android:fontFamily="@font/lato"
+        android:text="@string/admin_dashboard"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView24"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:fontFamily="@font/lato"
+        android:text="@string/admin_database_daily"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@+id/textView26"
+        app:layout_constraintStart_toStartOf="@+id/adminHomeTextView"
+        app:layout_constraintTop_toBottomOf="@+id/adminHomeTextView" />
+
+    <TextView
+        android:id="@+id/textView26"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:fontFamily="@font/lato"
+        android:text="@string/admin_database_daily_count"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/adminHomeTextView"
+        app:layout_constraintStart_toEndOf="@+id/textView24"
+        app:layout_constraintTop_toBottomOf="@+id/adminHomeTextView" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/statisticsFillerConstraintLayout"
+        android:layout_width="0dp"
+        android:layout_height="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/statisticsTextView">
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/statisticsConstraintLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/statisticsFillerConstraintLayout">
+
+        <TextView
+            android:id="@+id/weeklyUserLoginsTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="16dp"
+            android:fontFamily="@font/lato"
+            android:text="@string/admin_weekly_user_logins"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toStartOf="@+id/weeklyUserLoginsValueTextView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/weeklyUserLoginsValueTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="32dp"
+            android:fontFamily="@font/lato"
+            android:text="@string/admin_weekly_user_login_count"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/weeklyUserLoginsTextView"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/weeklyOrdersTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:fontFamily="@font/lato"
+            android:text="@string/admin_weekly_orders"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="@+id/weeklyUserLoginsTextView"
+            app:layout_constraintStart_toStartOf="@+id/weeklyUserLoginsTextView"
+            app:layout_constraintTop_toBottomOf="@+id/weeklyUserLoginsTextView" />
+
+        <TextView
+            android:id="@+id/weeklyOrderValuesTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:fontFamily="@font/lato"
+            android:text="@string/admin_weekly_order_count"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="@+id/weeklyUserLoginsValueTextView"
+            app:layout_constraintStart_toStartOf="@+id/weeklyUserLoginsValueTextView"
+            app:layout_constraintTop_toBottomOf="@+id/weeklyUserLoginsValueTextView" />
+
+        <TextView
+            android:id="@+id/monthlyRegisteredCompaniesTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:fontFamily="@font/lato"
+            android:text="@string/admin_monthly_company_registered_line_chart_total_companies"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="@+id/weeklyOrdersTextView"
+            app:layout_constraintStart_toStartOf="@+id/weeklyOrdersTextView"
+            app:layout_constraintTop_toBottomOf="@+id/weeklyOrdersTextView" />
+
+        <TextView
+            android:id="@+id/monthlyRegisteredCompanyValuesTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:fontFamily="@font/lato"
+            android:text="@string/admin_monthly_registered_company_count"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="@+id/weeklyOrderValuesTextView"
+            app:layout_constraintStart_toStartOf="@+id/weeklyOrderValuesTextView"
+            app:layout_constraintTop_toBottomOf="@+id/weeklyOrderValuesTextView" />
+
+        <TextView
+            android:id="@+id/monthlyRegisteredDriversTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="24dp"
+            android:fontFamily="@font/lato"
+            android:text="@string/admin_monthly_registered_drivers"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/monthlyRegisteredCompaniesTextView"
+            app:layout_constraintStart_toStartOf="@+id/monthlyRegisteredCompaniesTextView"
+            app:layout_constraintTop_toBottomOf="@+id/monthlyRegisteredCompaniesTextView" />
+
+        <TextView
+            android:id="@+id/monthlyRegisteredDriverValuesTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lato"
+            android:text="@string/admin_monthly_registered_driver_count"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="@+id/monthlyRegisteredCompanyValuesTextView"
+            app:layout_constraintStart_toStartOf="@+id/monthlyRegisteredCompanyValuesTextView"
+            app:layout_constraintTop_toTopOf="@+id/monthlyRegisteredDriversTextView" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/statisticsTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/lato"
+        android:text="@string/admin_statistics"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/adminHomeTextView"
+        app:layout_constraintStart_toStartOf="@+id/adminHomeTextView"
+        app:layout_constraintTop_toBottomOf="@+id/textView24" />
+
+    <ImageView
+        android:id="@+id/statisticsCollapsible"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/ic_arrow_up"
+        app:layout_constraintBottom_toBottomOf="@+id/statisticsTextView"
+        app:layout_constraintEnd_toEndOf="@+id/adminHomeTextView"
+        app:layout_constraintStart_toEndOf="@+id/statisticsTextView"
+        app:layout_constraintTop_toTopOf="@+id/statisticsTextView" />
+
+    <TextView
+        android:id="@+id/chartsTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/lato"
+        android:text="@string/admin_charts"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/adminHomeTextView"
+        app:layout_constraintStart_toStartOf="@+id/adminHomeTextView"
+        app:layout_constraintTop_toBottomOf="@+id/statisticsConstraintLayout" />
+
+    <ImageView
+        android:id="@+id/adminChartsCollapsible"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/ic_arrow_up"
+        app:layout_constraintBottom_toBottomOf="@+id/chartsTextView"
+        app:layout_constraintEnd_toEndOf="@+id/adminHomeTextView"
+        app:layout_constraintStart_toEndOf="@+id/chartsTextView"
+        app:layout_constraintTop_toTopOf="@+id/chartsTextView" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/adminChartsFillerConstraint"
+        android:layout_width="0dp"
+        android:layout_height="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chartsTextView">
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/adminChartsConstraintLayout"
+        android:layout_width="0dp"
+        android:layout_height="2000dp"
+        android:layout_marginBottom="32dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/adminChartsFillerConstraint">
+
+        <TextView
+            android:id="@+id/orderStatusPieChartTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="40dp"
+            android:fontFamily="@font/lato"
+            android:text="@string/admin_monthly_orders_status_pie_chart"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/orderStatusPieChartCollapsible"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginEnd="24dp"
+            android:src="@drawable/ic_arrow_up"
+            app:layout_constraintBottom_toBottomOf="@+id/orderStatusPieChartTextView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/orderStatusPieChartTextView"
+            app:layout_constraintTop_toTopOf="@+id/orderStatusPieChartTextView" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/orderStatusPieChartFillerConstraint"
+            android:layout_width="0dp"
+            android:layout_height="32dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/orderStatusPieChartTextView">
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/orderStatusPieChartConstraintLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/orderStatusPieChartFillerConstraint">
+
+            <com.github.mikephil.charting.charts.PieChart
+                android:id="@+id/orderStatusPieChart"
+                android:layout_width="0dp"
+                android:layout_height="400dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="24dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/pieChartMonthlyOrdersTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="24dp"
+                android:layout_marginBottom="24dp"
+                android:fontFamily="@font/lato"
+                android:text="@string/admin_monthly_orders_status_pie_chart_total_orders"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/pieChartMonthlyOrdersValueTextView"
+                app:layout_constraintStart_toStartOf="@+id/orderStatusPieChart"
+                app:layout_constraintTop_toBottomOf="@+id/orderStatusPieChart" />
+
+            <TextView
+                android:id="@+id/pieChartMonthlyOrdersValueTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="24dp"
+                android:fontFamily="@font/lato"
+                android:text="@string/admin_monthly_orders_status_pie_chart_total_order_count"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/pieChartMonthlyOrdersTextView"
+                app:layout_constraintTop_toBottomOf="@+id/orderStatusPieChart" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/monthlyUsersRegisteredBarChartTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="40dp"
+            android:fontFamily="@font/lato"
+            android:text="@string/admin_monthly_users_registered_chart"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/orderStatusPieChartConstraintLayout" />
+
+        <ImageView
+            android:id="@+id/usersRegisteredBarChartCollapsible"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginEnd="24dp"
+            android:src="@drawable/ic_arrow_up"
+            app:layout_constraintBottom_toBottomOf="@+id/monthlyUsersRegisteredBarChartTextView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/monthlyUsersRegisteredBarChartTextView"
+            app:layout_constraintTop_toBottomOf="@+id/orderStatusPieChartConstraintLayout"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/usersRegisteredBarChartFillerConstraint"
+            android:layout_width="0dp"
+            android:layout_height="32dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/monthlyUsersRegisteredBarChartTextView">
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/usersRegisteredBarChartConstraintLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/usersRegisteredBarChartFillerConstraint">
+
+            <com.github.mikephil.charting.charts.BarChart
+                android:id="@+id/usersRegisteredBarChart"
+                android:layout_width="0dp"
+                android:layout_height="350dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="24dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/monthlyUserRegistrationsTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="24dp"
+                android:fontFamily="@font/lato"
+                android:text="@string/admin_monthly_users_registered_chart_total_users"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/monthlyUserRegistrationValuesTextView"
+                app:layout_constraintStart_toStartOf="@+id/usersRegisteredBarChart"
+                app:layout_constraintTop_toBottomOf="@+id/usersRegisteredBarChart" />
+
+            <TextView
+                android:id="@+id/monthlyUserRegistrationValuesTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="16dp"
+                android:fontFamily="@font/lato"
+                android:text="@string/admin_monthly_users_registered_chart_total_user_count"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="@+id/usersRegisteredBarChart"
+                app:layout_constraintStart_toEndOf="@+id/monthlyUserRegistrationsTextView"
+                app:layout_constraintTop_toBottomOf="@+id/usersRegisteredBarChart" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/companiesRegisteredLineChartTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="40dp"
+            android:fontFamily="@font/lato"
+            android:text="@string/admin_monthly_companies_registered_line_chart"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/usersRegisteredBarChartConstraintLayout" />
+
+        <ImageView
+            android:id="@+id/companiesRegisteredLineChartCollapsible"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginEnd="24dp"
+            android:src="@drawable/ic_arrow_up"
+            app:layout_constraintBottom_toBottomOf="@+id/companiesRegisteredLineChartTextView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/companiesRegisteredLineChartTextView"
+            app:layout_constraintTop_toBottomOf="@+id/usersRegisteredBarChartConstraintLayout" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/companiesRegisteredLineChartFillerConstraint"
+            android:layout_width="0dp"
+            android:layout_height="32dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/companiesRegisteredLineChartTextView">
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/companiesRegisteredLineChartConstraintLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/companiesRegisteredLineChartFillerConstraint">
+
+            <com.github.mikephil.charting.charts.LineChart
+                android:id="@+id/companiesRegisteredLineChart"
+                android:layout_width="0dp"
+                android:layout_height="350dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="24dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/montlyCompaniesRegisteredTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="24dp"
+                android:fontFamily="@font/lato"
+                android:text="@string/admin_monthly_company_registered_line_chart_total_companies"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/monthlyCompaniesRegisteredValueTextView"
+                app:layout_constraintStart_toStartOf="@+id/companiesRegisteredLineChart"
+                app:layout_constraintTop_toBottomOf="@+id/companiesRegisteredLineChart" />
+
+            <TextView
+                android:id="@+id/monthlyCompaniesRegisteredValueTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="16dp"
+                android:fontFamily="@font/lato"
+                android:text="@string/admin_monthly_companies_registered_line_chart_total_company_count"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="@+id/companiesRegisteredLineChart"
+                app:layout_constraintStart_toEndOf="@+id/montlyCompaniesRegisteredTextView"
+                app:layout_constraintTop_toBottomOf="@+id/companiesRegisteredLineChart" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/downTimeReportsBarChartTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="40dp"
+            android:fontFamily="@font/lato"
+            android:text="@string/admin_monthly_downtime_reports_bar_chart"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/companiesRegisteredLineChartConstraintLayout" />
+
+        <ImageView
+            android:id="@+id/downTimeReportsBarChartCollapsible"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginEnd="24dp"
+            android:src="@drawable/ic_arrow_up"
+            app:layout_constraintBottom_toBottomOf="@+id/downTimeReportsBarChartTextView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/downTimeReportsBarChartTextView"
+            app:layout_constraintTop_toBottomOf="@+id/companiesRegisteredLineChartConstraintLayout" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/downTimeReportsBarChartFillerConstraint"
+            android:layout_width="0dp"
+            android:layout_height="32dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/downTimeReportsBarChartTextView">
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/downTimeReportsBarChartConstraintLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/downTimeReportsBarChartFillerConstraint">
+
+            <com.github.mikephil.charting.charts.BarChart
+                android:id="@+id/downTimeReportsBarChart"
+                android:layout_width="0dp"
+                android:layout_height="350dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="24dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/monthlyDownTimesReportedTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="24dp"
+                android:layout_marginBottom="24dp"
+                android:fontFamily="@font/lato"
+                android:text="@string/admin_monthly_downtime_reports_bar_total_reports"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/monthlyDownTimeReportsValueTextView"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/downTimeReportsBarChart" />
+
+            <TextView
+                android:id="@+id/monthlyDownTimeReportsValueTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="24dp"
+                android:fontFamily="@font/lato"
+                android:text="@string/admin_monthly_downtime_reports_bar_total_report_count"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/monthlyDownTimesReportedTextView"
+                app:layout_constraintTop_toBottomOf="@+id/downTimeReportsBarChart" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

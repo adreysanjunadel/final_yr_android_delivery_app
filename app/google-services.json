@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "670450154017",
+    "project_id": "swiftex-e287a",
+    "storage_bucket": "swiftex-e287a.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:670450154017:android:49b332236723d8c022c160",
+        "android_client_info": {
+          "package_name": "lk.javainstitute.swiftex"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBE4F_S26vkuK479f7s_bZDmTxXE2zkwNY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

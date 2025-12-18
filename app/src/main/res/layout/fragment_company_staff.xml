@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nested_scroll_company_staff"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".user.company.CompanyStaffFragment">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/companyStaffConstraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/cover_blue"
+    tools:context=".user.company.CompanyStaffFragment">
+
+    <TextView
+        android:id="@+id/companySearchNewStaffTextView2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/lato"
+        android:text="@string/company_add_staff"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/companyStaffTextView"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/companyStaffTextView"
+        app:layout_constraintTop_toBottomOf="@+id/companyExistingStaffConstraintLayout" />
+
+    <TextView
+        android:id="@+id/companyStaffTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/lato"
+        android:text="@string/company_staff"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/companyCurrentStaffTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/lato"
+        android:text="@string/company_current_staff"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/companyStaffTextView"
+        app:layout_constraintStart_toStartOf="@+id/companyStaffTextView"
+        app:layout_constraintTop_toBottomOf="@+id/companyStaffTextView" />
+
+    <ImageView
+        android:id="@+id/currentStaffCollapsible"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/ic_arrow_up"
+        app:layout_constraintBottom_toBottomOf="@+id/companyCurrentStaffTextView"
+        app:layout_constraintEnd_toEndOf="@+id/companyStaffTextView"
+        app:layout_constraintStart_toEndOf="@+id/companyCurrentStaffTextView"
+        app:layout_constraintTop_toTopOf="@+id/companyCurrentStaffTextView" />
+
+    <ImageView
+        android:id="@+id/searchNewStaffCollapsible"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/ic_arrow_up"
+        app:layout_constraintBottom_toBottomOf="@+id/companySearchNewStaffTextView2"
+        app:layout_constraintEnd_toEndOf="@+id/companyStaffTextView"
+        app:layout_constraintStart_toEndOf="@+id/companySearchNewStaffTextView2"
+        app:layout_constraintTop_toTopOf="@+id/companySearchNewStaffTextView2" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/companyExistingStaffFillConstraint"
+        android:layout_width="0dp"
+        android:layout_height="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/companyCurrentStaffTextView">
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/companyExistingStaffConstraintLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/companyExistingStaffFillConstraint">
+
+        <EditText
+            android:id="@+id/searchCompanyUserEmailEditText"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/edit_text_border"
+            android:backgroundTint="@color/bluegreen"
+            android:ems="10"
+            android:fontFamily="@font/lato"
+            android:hint="@string/company_search_user"
+            android:inputType="textEmailAddress"
+            android:padding="12dp"
+            android:textColorHint="@color/lightbluegreen"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/staffSearchButton"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:backgroundTint="@color/lightbluegreen"
+            android:fontFamily="@font/lato"
+            android:text="@string/search"
+            android:textSize="18sp"
+            app:cornerRadius="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/searchCompanyUserEmailEditText" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/companyUsersRecyclerView"
+            android:layout_width="0dp"
+            android:layout_height="200dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/edit_text_border"
+            android:backgroundTint="@color/lightbluegreen"
+            android:padding="12dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/staffSearchButton" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/companyHireUserFillerConstraint"
+        android:layout_width="409dp"
+        android:layout_height="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/companySearchNewStaffTextView2">
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/hireUserConstraintLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/companyHireUserFillerConstraint">
+
+        <EditText
+            android:id="@+id/searchUserEmailEditText"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/edit_text_border"
+            android:backgroundTint="@color/bluegreen"
+            android:ems="10"
+            android:fontFamily="@font/lato"
+            android:hint="@string/company_search_new_staff"
+            android:inputType="textEmailAddress"
+            android:padding="12dp"
+            android:textColorHint="@color/lighterblue"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/addStaffSearchButton"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:backgroundTint="@color/lighterblue"
+            android:fontFamily="@font/lato"
+            android:text="@string/search"
+            android:textSize="18sp"
+            app:cornerRadius="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/searchUserEmailEditText" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/companySearchUsersRecyclerView"
+            android:layout_width="0dp"
+            android:layout_height="300dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/edit_text_border"
+            android:backgroundTint="@color/lightbluegreen"
+            android:padding="12dp"
+            app:layout_constraintEnd_toEndOf="@+id/addStaffSearchButton"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/addStaffSearchButton"
+            app:layout_constraintTop_toBottomOf="@+id/addStaffSearchButton" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

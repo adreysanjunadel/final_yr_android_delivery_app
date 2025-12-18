@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nested_scroll"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".user.company.CompanyProfileFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/companyProfileFragmentConstraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/cover_blue"
+        android:fitsSystemWindows="true"
+        tools:context=".user.company.CompanyProfileFragment">
+
+        <ImageView
+            android:id="@+id/companyProfileAddressDetailsCollapsible"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="@+id/companyAddressDetailsTextView"
+            app:layout_constraintEnd_toEndOf="@+id/companyDetailsCollapsible"
+            app:layout_constraintStart_toEndOf="@+id/companyAddressDetailsTextView"
+            app:layout_constraintTop_toTopOf="@+id/companyAddressDetailsTextView"
+            app:srcCompat="@drawable/ic_arrow_up" />
+
+        <TextView
+            android:id="@+id/companyAddressDetailsTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="32dp"
+            android:fontFamily="@font/lato"
+            android:text="@string/user_address_details"
+            android:textSize="22sp"
+            app:layout_constraintEnd_toEndOf="@+id/companyAccountTextView"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/companyAccountTextView"
+            app:layout_constraintTop_toBottomOf="@+id/companyDetailsConstraintLayout" />
+
+        <TextView
+            android:id="@+id/companyDetailsTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="32dp"
+            android:fontFamily="@font/lato"
+            android:text="@string/company_create_details"
+            android:textSize="22sp"
+            app:layout_constraintEnd_toEndOf="@+id/companyAccountTextView"
+            app:layout_constraintStart_toStartOf="@+id/companyAccountTextView"
+            app:layout_constraintTop_toBottomOf="@+id/companyAccountTextView" />
+
+        <ImageView
+            android:id="@+id/companyDetailsCollapsible"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintBottom_toBottomOf="@+id/companyDetailsTextView"
+            app:layout_constraintEnd_toEndOf="@+id/companyAccountTextView"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/companyDetailsTextView"
+            app:layout_constraintTop_toTopOf="@+id/companyDetailsTextView"
+            app:layout_constraintVertical_bias="1.0"
+            app:srcCompat="@drawable/ic_arrow_up" />
+
+        <TextView
+            android:id="@+id/companyAccountTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:fontFamily="@font/lato"
+            android:text="@string/company_profile"
+            android:textSize="24sp"
+            android:textStyle="bold|italic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/companyDetailsFillerConstraint"
+            android:layout_width="0dp"
+            android:layout_height="32dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/companyDetailsTextView">
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/companyDetailsConstraintLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/companyDetailsFillerConstraint">
+
+            <ImageView
+                android:id="@+id/companyProfileImageView"
+                android:layout_width="92dp"
+                android:layout_height="92dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_menu_profile" />
+
+            <EditText
+                android:id="@+id/editTextCompanyName"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="40dp"
+                android:background="@drawable/edit_text_border"
+                android:backgroundTint="@color/marine"
+                android:ems="10"
+                android:fontFamily="@font/lato"
+                android:hint="@string/company_create_name"
+                android:inputType="text"
+                android:padding="12dp"
+                android:textColor="@color/marine"
+                android:textColorHint="@color/lighterblue"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/companyProfileImageView" />
+
+            <Spinner
+                android:id="@+id/companyIndustrySpinner"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/edit_text_border"
+                android:backgroundTint="@color/bluegreen"
+                app:layout_constraintEnd_toEndOf="@+id/editTextCompanyName"
+                app:layout_constraintStart_toStartOf="@+id/editTextCompanyName"
+                app:layout_constraintTop_toBottomOf="@+id/editTextCompanyName" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/companyAddressDetailsFillerConstraint"
+            android:layout_width="0dp"
+            android:layout_height="32dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/companyAddressDetailsTextView">
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/companyAddressDetailsConstraintLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/companyAddressDetailsFillerConstraint">
+
+            <EditText
+                android:id="@+id/editTextCompanyAddressNo"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="40dp"
+                android:layout_marginEnd="40dp"
+                android:background="@drawable/edit_text_border"
+                android:backgroundTint="@color/bluegreen"
+                android:ems="10"
+                android:fontFamily="@font/lato"
+                android:hint="@string/address_no"
+                android:padding="12dp"
+                android:textColor="@color/bluegreen"
+                android:textColorHint="@color/lightbluegreen"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/editTextCompanyAddressStreet1"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/edit_text_border"
+                android:backgroundTint="@color/bluegreen"
+                android:ems="10"
+                android:fontFamily="@font/lato"
+                android:hint="@string/address_street1"
+                android:padding="12dp"
+                android:textColor="@color/bluegreen"
+                android:textColorHint="@color/lightbluegreen"
+                app:layout_constraintEnd_toEndOf="@+id/editTextCompanyAddressNo"
+                app:layout_constraintStart_toStartOf="@+id/editTextCompanyAddressNo"
+                app:layout_constraintTop_toBottomOf="@+id/editTextCompanyAddressNo" />
+
+            <EditText
+                android:id="@+id/editTextCompanyAddressStreet2"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/edit_text_border"
+                android:backgroundTint="@color/bluegreen"
+                android:ems="10"
+                android:fontFamily="@font/lato"
+                android:hint="@string/address_street2"
+                android:padding="12dp"
+                android:textColor="@color/bluegreen"
+                android:textColorHint="@color/lightbluegreen"
+                app:layout_constraintEnd_toEndOf="@+id/editTextCompanyAddressStreet1"
+                app:layout_constraintStart_toStartOf="@+id/editTextCompanyAddressStreet1"
+                app:layout_constraintTop_toBottomOf="@+id/editTextCompanyAddressStreet1" />
+
+            <Spinner
+                android:id="@+id/companyProvinceSpinner"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/edit_text_border"
+                android:backgroundTint="@color/bluegreen"
+                app:layout_constraintEnd_toEndOf="@+id/editTextCompanyAddressStreet2"
+                app:layout_constraintStart_toStartOf="@+id/editTextCompanyAddressStreet2"
+                app:layout_constraintTop_toBottomOf="@+id/editTextCompanyAddressStreet2" />
+
+            <Spinner
+                android:id="@+id/companyCitySpinner"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/edit_text_border"
+                android:backgroundTint="@color/bluegreen"
+                app:layout_constraintEnd_toEndOf="@+id/editTextCompanyAddressStreet2"
+                app:layout_constraintStart_toStartOf="@+id/editTextCompanyAddressStreet2"
+                app:layout_constraintTop_toBottomOf="@+id/companyProvinceSpinner" />
+
+            <Button
+                android:id="@+id/createCompanyAccountButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:backgroundTint="@color/bluegreen"
+                android:fontFamily="@font/lato"
+                android:text="@string/company_create_account"
+                android:textSize="18sp"
+                app:cornerRadius="8dp"
+                app:layout_constraintEnd_toEndOf="@+id/editTextCompanyAddressStreet2"
+                app:layout_constraintStart_toStartOf="@+id/editTextCompanyAddressStreet2"
+                app:layout_constraintTop_toBottomOf="@+id/companyCitySpinner" />
+
+            <Button
+                android:id="@+id/updateCompanyProfileButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="72dp"
+                android:layout_marginBottom="8dp"
+                android:backgroundTint="@color/lighterblue"
+                android:fontFamily="@font/lato"
+                android:text="@string/company_details_update"
+                android:textSize="18sp"
+                app:cornerRadius="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/companyCitySpinner"
+                app:layout_constraintStart_toStartOf="@+id/companyCitySpinner"
+                app:layout_constraintTop_toBottomOf="@+id/companyCitySpinner" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <Button
+            android:id="@+id/companyBlockAccountButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="40dp"
+            android:backgroundTint="@color/orange_premium"
+            android:fontFamily="@font/lato"
+            android:text="@string/company_account_block"
+            android:textSize="18sp"
+            app:cornerRadius="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/companyAddressDetailsConstraintLayout" />
+
+        <Button
+            android:id="@+id/companyDeleteAccountButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:backgroundTint="@color/scarlet"
+            android:fontFamily="@font/lato"
+            android:text="@string/company_account_delete"
+            android:textSize="18sp"
+            app:cornerRadius="8dp"
+            app:layout_constraintEnd_toEndOf="@+id/companyBlockAccountButton"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/companyBlockAccountButton"
+            app:layout_constraintTop_toBottomOf="@+id/companyBlockAccountButton" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/companyProfileBottomConstraint"
+            android:layout_width="0dp"
+            android:layout_height="32dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

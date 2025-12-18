@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nested_scroll"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".admin.account_management.AdminCompanyManagementFragment">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/adminCompanyManagementConstraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/cover_blue"
+        tools:context=".admin.account_management.AdminCompanyManagementFragment">
+
+        <!-- TODO: Update blank fragment layout -->
+
+        <TextView
+            android:id="@+id/companyManagementTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:fontFamily="@font/lato"
+            android:text="@string/button_ucm"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/adminManagementCreateNewCompanyTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="32dp"
+            android:fontFamily="@font/lato"
+            android:text="@string/admin_company_create_new"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="@+id/companyManagementTextView"
+            app:layout_constraintStart_toStartOf="@+id/companyManagementTextView"
+            app:layout_constraintTop_toBottomOf="@+id/companyManagementTextView" />
+
+        <Button
+            android:id="@+id/adminManagementCreateNewCompanyButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="32dp"
+            android:backgroundTint="@color/bluegreen"
+            android:fontFamily="@font/lato"
+            android:text="@string/admin_company_create_new"
+            android:textSize="18sp"
+            app:cornerRadius="8dp"
+            app:layout_constraintEnd_toEndOf="@+id/companyManagementTextView"
+            app:layout_constraintStart_toStartOf="@+id/companyManagementTextView"
+            app:layout_constraintTop_toBottomOf="@+id/adminManagementCreateNewCompanyTextView" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/userManagementCreateFillerConstraint"
+            android:layout_width="0dp"
+            android:layout_height="32dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/adminManagementCreateNewCompanyButton">
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/adminManagementExistingCompanyTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lato"
+            android:text="@string/admin_existing_companies"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="@+id/adminManagementCreateNewCompanyTextView"
+            app:layout_constraintStart_toStartOf="@+id/adminManagementCreateNewCompanyTextView"
+            app:layout_constraintTop_toBottomOf="@+id/userManagementCreateFillerConstraint" />
+
+        <ImageView
+            android:id="@+id/adminManagementCreateCompanyCollapsible"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginEnd="16dp"
+            android:src="@drawable/ic_arrow_up"
+            app:layout_constraintBottom_toBottomOf="@+id/adminManagementCreateNewCompanyTextView"
+            app:layout_constraintEnd_toEndOf="@+id/companyManagementTextView"
+            app:layout_constraintStart_toEndOf="@+id/adminManagementCreateNewCompanyTextView"
+            app:layout_constraintTop_toTopOf="@+id/adminManagementCreateNewCompanyTextView" />
+
+        <ImageView
+            android:id="@+id/adminManagementExistingCompaniesCollapsible"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginEnd="16dp"
+            android:src="@drawable/ic_arrow_up"
+            app:layout_constraintBottom_toBottomOf="@+id/adminManagementExistingCompanyTextView"
+            app:layout_constraintEnd_toEndOf="@+id/companyManagementTextView"
+            app:layout_constraintStart_toEndOf="@+id/adminManagementExistingCompanyTextView"
+            app:layout_constraintTop_toTopOf="@+id/adminManagementExistingCompanyTextView" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/existingCompaniesFillerConstraintLayout"
+            android:layout_width="0dp"
+            android:layout_height="32dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/adminManagementExistingCompanyTextView">
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/adminManagementExistingCompaniesConstraintLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="32dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/existingCompaniesFillerConstraintLayout">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/existingCompaniesRecyclerView"
+                android:layout_width="0dp"
+                android:layout_height="400dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="32dp"
+                android:background="@drawable/edit_text_border"
+                android:backgroundTint="@color/bluegreen"
+                android:padding="3dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/searchCompaniesButton" />
+
+            <EditText
+                android:id="@+id/searchExistingCompaniesEditText"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="48dp"
+                android:layout_marginEnd="48dp"
+                android:background="@drawable/edit_text_border"
+                android:backgroundTint="@color/lightbluegreen"
+                android:ems="10"
+                android:fontFamily="@font/lato"
+                android:hint="@string/company_create_name"
+                android:inputType="text"
+                android:padding="12dp"
+                android:textColor="@color/bluegreen"
+                android:textColorHint="@color/lightbluegreen"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/searchCompaniesButton"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="8dp"
+                android:backgroundTint="@color/lightbluegreen"
+                android:fontFamily="@font/lato"
+                android:text="@string/admin_search_companies"
+                android:textSize="18sp"
+                app:cornerRadius="8dp"
+                app:layout_constraintEnd_toEndOf="@+id/searchExistingCompaniesEditText"
+                app:layout_constraintStart_toStartOf="@+id/searchExistingCompaniesEditText"
+                app:layout_constraintTop_toBottomOf="@+id/searchExistingCompaniesEditText" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

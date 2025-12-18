@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/existingStaffProfileConstraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/cover_blue"
+    tools:context=".user.company.ExistingStaffProfileFragment" >
+
+    <TextView
+        android:id="@+id/existingStaffProfileTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/lato"
+        android:text="@string/existing_profile"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/existingStaffDetailsTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:fontFamily="@font/lato"
+        android:text="@string/existing_staff_details"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="@+id/existingStaffProfileTextView"
+        app:layout_constraintStart_toStartOf="@+id/existingStaffProfileTextView"
+        app:layout_constraintTop_toBottomOf="@+id/existingStaffProfileTextView" />
+
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="92dp"
+        android:layout_height="92dp"
+        android:layout_marginTop="32dp"
+        android:src="@drawable/ic_menu_profile"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/existingStaffDetailsTextView" />
+
+    <EditText
+        android:id="@+id/existingFnameEditText"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/edit_text_border"
+        android:backgroundTint="@color/design_default_color_primary_variant"
+        android:ems="10"
+        android:fontFamily="@font/lato"
+        android:hint="@string/text1"
+        android:inputType="text"
+        android:padding="12dp"
+        android:textColor="@color/design_default_color_primary_variant"
+        android:textColorHint="@color/design_default_color_primary"
+        app:layout_constraintEnd_toStartOf="@+id/editTextText2"
+        app:layout_constraintStart_toStartOf="@+id/existingStaffProfileTextView"
+        app:layout_constraintTop_toBottomOf="@+id/imageView8" />
+
+    <EditText
+        android:id="@+id/editTextText2"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/edit_text_border"
+        android:backgroundTint="@color/design_default_color_primary_variant"
+        android:ems="10"
+        android:fontFamily="@font/lato"
+        android:hint="@string/text2"
+        android:inputType="text"
+        android:padding="12dp"
+        android:textColor="@color/design_default_color_primary_variant"
+        android:textColorHint="@color/design_default_color_primary"
+        app:layout_constraintEnd_toEndOf="@+id/existingStaffProfileTextView"
+        app:layout_constraintStart_toEndOf="@+id/existingFnameEditText"
+        app:layout_constraintTop_toBottomOf="@+id/imageView8" />
+
+    <EditText
+        android:id="@+id/editTextText3"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/edit_text_border"
+        android:backgroundTint="@color/design_default_color_primary_variant"
+        android:ems="10"
+        android:fontFamily="@font/lato"
+        android:hint="@string/text5"
+        android:inputType="text|textEmailAddress"
+        android:padding="12dp"
+        android:textColor="@color/design_default_color_primary_variant"
+        android:textColorHint="@color/design_default_color_primary"
+        app:layout_constraintEnd_toEndOf="@+id/editTextText2"
+        app:layout_constraintStart_toStartOf="@+id/existingFnameEditText"
+        app:layout_constraintTop_toBottomOf="@+id/existingFnameEditText" />
+
+    <Spinner
+        android:id="@+id/permissionsSpinner"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/edit_text_border"
+        android:backgroundTint="@color/design_default_color_primary_variant"
+        android:padding="12dp"
+        app:layout_constraintEnd_toEndOf="@+id/editTextText3"
+        app:layout_constraintStart_toStartOf="@+id/editTextText3"
+        app:layout_constraintTop_toBottomOf="@+id/editTextText3" />
+
+    <TextView
+        android:id="@+id/existedStaffJoinedTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="8dp"
+        android:fontFamily="@font/lato"
+        android:text="@string/existing_since"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@+id/existingStaffJoinedDateTimeTextView"
+        app:layout_constraintStart_toStartOf="@+id/permissionsSpinner"
+        app:layout_constraintTop_toBottomOf="@+id/permissionsSpinner" />
+
+    <TextView
+        android:id="@+id/existingStaffJoinedDateTimeTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:fontFamily="@font/lato"
+        android:text="@string/existing_datetime"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/existedStaffJoinedTextView"
+        app:layout_constraintEnd_toEndOf="@+id/permissionsSpinner"
+        app:layout_constraintStart_toEndOf="@+id/existedStaffJoinedTextView"
+        app:layout_constraintTop_toTopOf="@+id/existedStaffJoinedTextView" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="@color/design_default_color_primary"
+        android:fontFamily="@font/lato"
+        android:text="@string/existing_staff_update"
+        android:textSize="18sp"
+        app:cornerRadius="8dp"
+        app:layout_constraintEnd_toEndOf="@+id/permissionsSpinner"
+        app:layout_constraintStart_toStartOf="@+id/permissionsSpinner"
+        app:layout_constraintTop_toBottomOf="@+id/existingStaffJoinedDateTimeTextView" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="@color/design_default_color_error"
+        android:fontFamily="@font/lato"
+        android:text="@string/existing_staff_delete"
+        android:textSize="18sp"
+        app:cornerRadius="8dp"
+        app:layout_constraintEnd_toEndOf="@+id/button"
+        app:layout_constraintStart_toStartOf="@+id/button"
+        app:layout_constraintTop_toBottomOf="@+id/button" />
+</androidx.constraintlayout.widget.ConstraintLayout>

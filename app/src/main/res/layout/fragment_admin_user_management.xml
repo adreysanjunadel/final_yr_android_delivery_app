@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nested_scroll"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".admin.account_management.AdminUserManagementFragment">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/adminUserManagementConstraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/cover_blue"
+        tools:context=".admin.account_management.AdminUserManagementFragment">
+
+        <!-- TODO: Update blank fragment layout -->
+
+        <TextView
+            android:id="@+id/userManagementTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:fontFamily="@font/lato"
+            android:text="@string/button_uam"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/adminManagementCreateNewUserTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="32dp"
+            android:fontFamily="@font/lato"
+            android:text="@string/admin_user_management_new_user"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="@+id/userManagementTextView"
+            app:layout_constraintStart_toStartOf="@+id/userManagementTextView"
+            app:layout_constraintTop_toBottomOf="@+id/userManagementTextView" />
+
+        <Button
+            android:id="@+id/adminManagementCreateNewUserButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="32dp"
+            android:backgroundTint="@color/bluegreen"
+            android:fontFamily="@font/lato"
+            android:text="@string/admin_user_management_new_user"
+            android:textSize="18sp"
+            app:cornerRadius="8dp"
+            app:layout_constraintEnd_toEndOf="@+id/userManagementTextView"
+            app:layout_constraintStart_toStartOf="@+id/userManagementTextView"
+            app:layout_constraintTop_toBottomOf="@+id/adminManagementCreateNewUserTextView" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/userManagementCreateFillerConstraint"
+            android:layout_width="0dp"
+            android:layout_height="32dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/adminManagementCreateNewUserButton">
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/adminManagementExistingUserTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lato"
+            android:text="@string/admin_user_management_existing_user"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="@+id/adminManagementCreateNewUserTextView"
+            app:layout_constraintStart_toStartOf="@+id/adminManagementCreateNewUserTextView"
+            app:layout_constraintTop_toBottomOf="@+id/userManagementCreateFillerConstraint" />
+
+        <ImageView
+            android:id="@+id/adminManagementCreateUserCollapsible"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginEnd="16dp"
+            android:src="@drawable/ic_arrow_up"
+            app:layout_constraintBottom_toBottomOf="@+id/adminManagementCreateNewUserTextView"
+            app:layout_constraintEnd_toEndOf="@+id/userManagementTextView"
+            app:layout_constraintStart_toEndOf="@+id/adminManagementCreateNewUserTextView"
+            app:layout_constraintTop_toTopOf="@+id/adminManagementCreateNewUserTextView" />
+
+        <ImageView
+            android:id="@+id/adminManagementExistingUsersCollapsible"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginEnd="16dp"
+            android:src="@drawable/ic_arrow_up"
+            app:layout_constraintBottom_toBottomOf="@+id/adminManagementExistingUserTextView"
+            app:layout_constraintEnd_toEndOf="@+id/userManagementTextView"
+            app:layout_constraintStart_toEndOf="@+id/adminManagementExistingUserTextView"
+            app:layout_constraintTop_toTopOf="@+id/adminManagementExistingUserTextView" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/existingUsersFillerConstraintLayout"
+            android:layout_width="0dp"
+            android:layout_height="32dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/adminManagementExistingUserTextView">
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/adminManagementExistingUserConstraintLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="32dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/existingUsersFillerConstraintLayout">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/adminManagementExistingUsersRecycleView"
+                android:layout_width="0dp"
+                android:layout_height="400dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="32dp"
+                android:background="@drawable/edit_text_border"
+                android:backgroundTint="@color/bluegreen"
+                android:padding="3dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/searchUserButton" />
+
+            <EditText
+                android:id="@+id/searchUserEditText"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="48dp"
+                android:layout_marginEnd="48dp"
+                android:background="@drawable/edit_text_border"
+                android:backgroundTint="@color/lightbluegreen"
+                android:ems="10"
+                android:fontFamily="@font/lato"
+                android:hint="@string/company_search_new_staff"
+                android:inputType="text"
+                android:padding="12dp"
+                android:textColor="@color/bluegreen"
+                android:textColorHint="@color/lightbluegreen"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/searchUserButton"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="8dp"
+                android:backgroundTint="@color/lightbluegreen"
+                android:fontFamily="@font/lato"
+                android:text="@string/admin_search_users"
+                android:textSize="18sp"
+                app:cornerRadius="8dp"
+                app:layout_constraintEnd_toEndOf="@+id/searchUserEditText"
+                app:layout_constraintStart_toStartOf="@+id/searchUserEditText"
+                app:layout_constraintTop_toBottomOf="@+id/searchUserEditText" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

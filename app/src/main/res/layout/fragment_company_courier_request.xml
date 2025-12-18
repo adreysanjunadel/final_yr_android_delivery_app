@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".user.company.CompanyCourierRequestFragment">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/companyCourierRequestConstraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/cover_blue"
+    tools:context=".user.company.CompanyCourierRequestFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <EditText
+        android:id="@+id/companyEditTextItemTitle"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/edit_text_border"
+        android:backgroundTint="@color/marine"
+        android:ems="10"
+        android:hint="@string/courier_item_title"
+        android:inputType="text"
+        android:padding="12dp"
+        android:textColorHint="@color/lighterblue"
+        app:layout_constraintEnd_toEndOf="@+id/companyItemModelSpinner"
+        app:layout_constraintStart_toStartOf="@+id/companyItemBrandSpinner"
+        app:layout_constraintTop_toBottomOf="@+id/companyItemBrandSpinner" />
+
+    <TextView
+        android:id="@+id/companyDriverTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="24dp"
+        android:fontFamily="@font/lato"
+        android:text="@string/courier_driver"
+        android:textColor="@color/marine"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/companyItemPriceEditText" />
+
+    <TextView
+        android:id="@+id/textViewCompanyCourier"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/lato"
+        android:text="@string/company_dashboard_button1"
+        android:textColor="@color/marine"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextCompanyDestination"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/edit_text_border"
+        android:backgroundTint="@color/marine"
+        android:ems="10"
+        android:fontFamily="@font/lato"
+        android:hint="@string/courier_destination"
+        android:inputType="text"
+        android:padding="12dp"
+        android:textColorHint="@color/lighterblue"
+        app:layout_constraintEnd_toEndOf="@+id/textViewCompanyCourier"
+        app:layout_constraintStart_toStartOf="@+id/textViewCompanyCourier"
+        app:layout_constraintTop_toBottomOf="@+id/textViewCompanyCourier" />
+
+    <TextView
+        android:id="@+id/textViewItemDetails"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="24dp"
+        android:fontFamily="@font/lato"
+        android:text="@string/courier_item_details"
+        android:textColor="@color/marine"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/companyCourierRequestVehicleTypeSpinner" />
+
+    <Spinner
+        android:id="@+id/companyItemCategorySpinner"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/edit_text_border"
+        android:backgroundTint="@color/marine"
+        android:padding="12dp"
+        app:layout_constraintEnd_toEndOf="@+id/textViewItemDetails"
+        app:layout_constraintStart_toStartOf="@+id/textViewItemDetails"
+        app:layout_constraintTop_toBottomOf="@+id/textViewItemDetails" />
+
+    <Spinner
+        android:id="@+id/companyItemBrandSpinner"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/edit_text_border"
+        android:backgroundTint="@color/marine"
+        android:padding="12dp"
+        app:layout_constraintEnd_toStartOf="@+id/companyItemModelSpinner"
+        app:layout_constraintStart_toStartOf="@+id/companyItemCategorySpinner"
+        app:layout_constraintTop_toBottomOf="@+id/companyItemCategorySpinner" />
+
+    <Spinner
+        android:id="@+id/companyItemModelSpinner"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/edit_text_border"
+        android:backgroundTint="@color/marine"
+        android:padding="12dp"
+        app:layout_constraintEnd_toEndOf="@+id/companyItemCategorySpinner"
+        app:layout_constraintStart_toEndOf="@+id/companyItemBrandSpinner"
+        app:layout_constraintTop_toBottomOf="@+id/companyItemCategorySpinner" />
+
+    <EditText
+        android:id="@+id/companyItemPriceEditText"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/edit_text_border"
+        android:backgroundTint="@color/marine"
+        android:ems="10"
+        android:fontFamily="@font/lato"
+        android:hint="@string/courier_item_price"
+        android:inputType="numberDecimal"
+        android:padding="12dp"
+        android:textColorHint="@color/lighterblue"
+        app:layout_constraintEnd_toStartOf="@+id/companyQuantityEditText"
+        app:layout_constraintStart_toStartOf="@+id/companyItemBrandSpinner"
+        app:layout_constraintTop_toBottomOf="@+id/companyEditTextItemTitle" />
+
+    <EditText
+        android:id="@+id/companyQuantityEditText"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="8dp"
+        android:background="@drawable/edit_text_border"
+        android:backgroundTint="@color/marine"
+        android:ems="10"
+        android:fontFamily="@font/lato"
+        android:hint="@string/courier_item_quantity"
+        android:inputType="numberDecimal"
+        android:padding="12dp"
+        android:textColorHint="@color/lighterblue"
+        app:layout_constraintBottom_toBottomOf="@+id/companyItemPriceEditText"
+        app:layout_constraintEnd_toEndOf="@+id/companyItemModelSpinner"
+        app:layout_constraintStart_toEndOf="@+id/companyItemPriceEditText"
+        app:layout_constraintTop_toTopOf="@+id/companyItemPriceEditText" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/companyDriverRecyclerView"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/edit_text_border"
+        android:backgroundTint="@color/marine"
+        android:padding="12dp"
+        app:layout_constraintEnd_toEndOf="@+id/companyDriverTextView"
+        app:layout_constraintStart_toStartOf="@+id/companyDriverTextView"
+        app:layout_constraintTop_toBottomOf="@+id/companyDriverTextView" />
+
+    <Button
+        android:id="@+id/companyCourierSubmitButton"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="32dp"
+        android:backgroundTint="@color/marine"
+        android:fontFamily="@font/lato"
+        android:text="@string/courier_submit"
+        android:textSize="20sp"
+        app:cornerRadius="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/companyDriverRecyclerView"
+        app:layout_constraintStart_toStartOf="@+id/companyDriverRecyclerView"
+        app:layout_constraintTop_toBottomOf="@+id/companyDriverRecyclerView" />
+
+    <Spinner
+        android:id="@+id/companyCourierRequestVehicleTypeSpinner"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/edit_text_border"
+        android:backgroundTint="@color/marine"
+        android:padding="12dp"
+        app:layout_constraintEnd_toEndOf="@+id/editTextCompanyDestination"
+        app:layout_constraintStart_toStartOf="@+id/editTextCompanyDestination"
+        app:layout_constraintTop_toBottomOf="@+id/editTextCompanyDestination" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

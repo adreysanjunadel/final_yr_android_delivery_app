@@ -1,0 +1,423 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nested_scroll"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".admin.driver_management.AdminCreateNewDriverFragment" >
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/adminManageDriverConstraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/cover_blue"
+    tools:context=".admin.driver_management.AdminCreateNewDriverFragment" >
+
+    <TextView
+        android:id="@+id/driverAccount"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/lato"
+        android:text="@string/admin_create_driver_account"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/driverPersonalDetailsTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:fontFamily="@font/lato"
+        android:text="@string/admin_create_driver_personal_details"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/driverAccount"
+        app:layout_constraintStart_toStartOf="@+id/driverAccount"
+        app:layout_constraintTop_toBottomOf="@+id/driverAccount" />
+
+    <ImageView
+        android:id="@+id/manageDriverPersonalDetailsCollapsible"
+        android:layout_width="12dp"
+        android:layout_height="13dp"
+        android:layout_marginEnd="16dp"
+        android:src="@drawable/ic_arrow_up"
+        app:layout_constraintBottom_toBottomOf="@+id/driverPersonalDetailsTextView"
+        app:layout_constraintEnd_toEndOf="@+id/driverAccount"
+        app:layout_constraintStart_toEndOf="@+id/driverPersonalDetailsTextView"
+        app:layout_constraintTop_toTopOf="@+id/driverPersonalDetailsTextView" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/manageDriverAccountPersonalDetailsFillerConstraint"
+        android:layout_width="0dp"
+        android:layout_height="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/driverPersonalDetailsTextView">
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/manageDriverPersonalDetailsConstraintLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/manageDriverAccountPersonalDetailsFillerConstraint">
+
+        <ImageView
+            android:id="@+id/imageView11"
+            android:layout_width="92dp"
+            android:layout_height="92dp"
+            android:src="@drawable/ic_menu_profile"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/manageDriverFirstNameEditText"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="40dp"
+            android:background="@drawable/edit_text_border"
+            android:backgroundTint="@color/marine"
+            android:ems="10"
+            android:fontFamily="@font/lato"
+            android:hint="@string/text1"
+            android:inputType="text"
+            android:padding="12dp"
+            android:textColor="@color/marine"
+            android:textColorHint="@color/lighterblue"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView11" />
+
+        <EditText
+            android:id="@+id/manageDriverLastNameEditText"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/edit_text_border"
+            android:backgroundTint="@color/marine"
+            android:ems="10"
+            android:fontFamily="@font/lato"
+            android:hint="@string/text2"
+            android:inputType="text"
+            android:padding="12dp"
+            android:textColor="@color/marine"
+            android:textColorHint="@color/lighterblue"
+            app:layout_constraintEnd_toEndOf="@+id/manageDriverFirstNameEditText"
+            app:layout_constraintStart_toStartOf="@+id/manageDriverFirstNameEditText"
+            app:layout_constraintTop_toBottomOf="@+id/manageDriverFirstNameEditText" />
+
+        <EditText
+            android:id="@+id/manageDriverMobileEditText"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/edit_text_border"
+            android:backgroundTint="@color/marine"
+            android:ems="10"
+            android:fontFamily="@font/lato"
+            android:hint="@string/text3"
+            android:inputType="phone"
+            android:padding="12dp"
+            android:textColor="@color/marine"
+            android:textColorHint="@color/lighterblue"
+            app:layout_constraintEnd_toEndOf="@+id/manageDriverLastNameEditText"
+            app:layout_constraintStart_toStartOf="@+id/manageDriverLastNameEditText"
+            app:layout_constraintTop_toBottomOf="@+id/manageDriverLastNameEditText" />
+
+        <EditText
+            android:id="@+id/manageDriverNICTextView"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/edit_text_border"
+            android:backgroundTint="@color/marine"
+            android:ems="10"
+            android:fontFamily="@font/lato"
+            android:hint="@string/text4"
+            android:inputType="text"
+            android:padding="12dp"
+            android:textColor="@color/marine"
+            android:textColorHint="@color/lighterblue"
+            app:layout_constraintEnd_toEndOf="@+id/manageDriverMobileEditText"
+            app:layout_constraintStart_toStartOf="@+id/manageDriverMobileEditText"
+            app:layout_constraintTop_toBottomOf="@+id/manageDriverMobileEditText" />
+
+        <EditText
+            android:id="@+id/manageDriverEmailEditText"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/edit_text_border"
+            android:backgroundTint="@color/marine"
+            android:ems="10"
+            android:fontFamily="@font/lato"
+            android:hint="@string/text5"
+            android:inputType="textEmailAddress"
+            android:padding="12dp"
+            android:textColor="@color/marine"
+            android:textColorHint="@color/lighterblue"
+            app:layout_constraintEnd_toEndOf="@+id/manageDriverNICTextView"
+            app:layout_constraintStart_toStartOf="@+id/manageDriverNICTextView"
+            app:layout_constraintTop_toBottomOf="@+id/manageDriverNICTextView" />
+
+        <TextView
+            android:id="@+id/manageDriverDOBTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="24dp"
+            android:fontFamily="@font/lato"
+            android:text="@string/admin_create_driver_dob"
+            android:textSize="19sp"
+            app:layout_constraintStart_toStartOf="@+id/manageDriverEmailEditText"
+            app:layout_constraintTop_toBottomOf="@+id/manageDriverEmailEditText" />
+
+        <CalendarView
+            android:id="@+id/manageDriverDOBCalendarView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            app:layout_constraintEnd_toEndOf="@+id/manageDriverEmailEditText"
+            app:layout_constraintStart_toStartOf="@+id/manageDriverEmailEditText"
+            app:layout_constraintTop_toBottomOf="@+id/manageDriverDOBTextView" />
+
+        <Button
+            android:id="@+id/manageDriverCreateDriverButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="@color/bluegreen"
+            android:fontFamily="@font/lato"
+            android:text="@string/admin_create_driver"
+            android:textSize="18sp"
+            app:cornerRadius="8dp"
+            app:layout_constraintEnd_toEndOf="@+id/manageDriverEmailEditText"
+            app:layout_constraintStart_toStartOf="@+id/manageDriverEmailEditText"
+            app:layout_constraintTop_toBottomOf="@+id/manageDriverDOBCalendarView" />
+
+        <Button
+            android:id="@+id/manageDriverUpdateDriverButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="80dp"
+            android:layout_marginEnd="40dp"
+            android:layout_marginBottom="24dp"
+            android:backgroundTint="@color/marine"
+            android:fontFamily="@font/lato"
+            android:text="@string/admin_update_driver"
+            android:textSize="18sp"
+            app:cornerRadius="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/manageDriverDOBCalendarView" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/manageDriverVehicleDetailsTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="32dp"
+        android:fontFamily="@font/lato"
+        android:text="@string/admin_create_driver_vehicle_details"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/manageDriverVehicleDetailsFillerConstraint"
+        app:layout_constraintEnd_toStartOf="@+id/manageDriverPersonalDetailsCollapsible"
+        app:layout_constraintStart_toStartOf="@+id/driverPersonalDetailsTextView"
+        app:layout_constraintTop_toBottomOf="@+id/manageDriverPersonalDetailsConstraintLayout" />
+
+    <ImageView
+        android:id="@+id/manageDriverVehicleDetailsCollapsible"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/ic_arrow_up"
+        app:layout_constraintBottom_toBottomOf="@+id/manageDriverVehicleDetailsTextView"
+        app:layout_constraintEnd_toEndOf="@+id/manageDriverPersonalDetailsCollapsible"
+        app:layout_constraintStart_toEndOf="@+id/manageDriverVehicleDetailsTextView"
+        app:layout_constraintTop_toTopOf="@+id/manageDriverVehicleDetailsTextView" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/manageDriverVehicleDetailsFillerConstraint"
+        android:layout_width="0dp"
+        android:layout_height="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/manageDriverVehicleDetailsTextView">
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/manageDriverVehicleDetailsConstraintLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/manageDriverVehicleDetailsFillerConstraint">
+
+        <EditText
+            android:id="@+id/manageDriverVehiclePlateEditText"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="40dp"
+            android:background="@drawable/edit_text_border"
+            android:backgroundTint="@color/marine"
+            android:ems="10"
+            android:fontFamily="@font/lato"
+            android:hint="@string/admin_create_driver_vehicle_plate"
+            android:inputType="text"
+            android:padding="12dp"
+            android:textColor="@color/marine"
+            android:textColorHint="@color/lighterblue"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/manageDriverVehicleTitleEditText"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/edit_text_border"
+            android:backgroundTint="@color/marine"
+            android:ems="10"
+            android:fontFamily="@font/lato"
+            android:hint="@string/admin_create_driver_vehicle_title"
+            android:inputType="text"
+            android:padding="12dp"
+            android:textColor="@color/marine"
+            android:textColorHint="@color/lighterblue"
+            app:layout_constraintEnd_toEndOf="@+id/manageDriverVehiclePlateEditText"
+            app:layout_constraintStart_toStartOf="@+id/manageDriverVehiclePlateEditText"
+            app:layout_constraintTop_toBottomOf="@+id/manageDriverVehiclePlateEditText" />
+
+        <Spinner
+            android:id="@+id/manageDriverVehicleBrandSpinner"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/edit_text_border"
+            android:backgroundTint="@color/marine"
+            android:padding="12dp"
+            app:layout_constraintEnd_toStartOf="@+id/manageDriversVehicleModelSpinner"
+            app:layout_constraintStart_toStartOf="@+id/manageDriverVehicleTitleEditText"
+            app:layout_constraintTop_toBottomOf="@+id/manageDriverVehicleTitleEditText" />
+
+        <Spinner
+            android:id="@+id/manageDriversVehicleModelSpinner"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/edit_text_border"
+            android:backgroundTint="@color/marine"
+            android:padding="12dp"
+            app:layout_constraintEnd_toEndOf="@+id/manageDriverVehicleTitleEditText"
+            app:layout_constraintStart_toEndOf="@+id/manageDriverVehicleBrandSpinner"
+            app:layout_constraintTop_toBottomOf="@+id/manageDriverVehicleTitleEditText" />
+
+        <Spinner
+            android:id="@+id/manageDriverVehicleTypeSpinner"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/edit_text_border"
+            android:backgroundTint="@color/marine"
+            android:padding="12dp"
+            app:layout_constraintEnd_toEndOf="@+id/manageDriversVehicleModelSpinner"
+            app:layout_constraintHorizontal_bias="0.384"
+            app:layout_constraintStart_toStartOf="@+id/manageDriverVehicleBrandSpinner"
+            app:layout_constraintTop_toBottomOf="@+id/manageDriverVehicleBrandSpinner" />
+
+        <Button
+            android:id="@+id/manageDriversAddVehicleDetailsButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="@color/bluegreen"
+            android:fontFamily="@font/lato"
+            android:text="@string/admin_create_driver_add_vehicle_details"
+            android:textSize="18sp"
+            app:cornerRadius="8dp"
+            app:layout_constraintEnd_toEndOf="@+id/manageDriverVehicleTypeSpinner"
+            app:layout_constraintStart_toStartOf="@+id/manageDriverVehicleTypeSpinner"
+            app:layout_constraintTop_toBottomOf="@+id/manageDriverVehicleTypeSpinner" />
+
+        <Button
+            android:id="@+id/manageDriversUpdateVehicleDetailsButton"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="80dp"
+            android:layout_marginEnd="40dp"
+            android:layout_marginBottom="24dp"
+            android:backgroundTint="@color/marine"
+            android:fontFamily="@font/lato"
+            android:text="@string/admin_create_driver_update_vehicle_details"
+            android:textSize="18sp"
+            app:cornerRadius="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/manageDriverVehicleTypeSpinner" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:id="@+id/manageDriverBlockAccountButton"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="@color/orange_premium"
+        android:fontFamily="@font/lato"
+        android:text="@string/admin_block_driver_account"
+        android:textSize="18sp"
+        app:cornerRadius="8dp"
+        app:layout_constraintEnd_toEndOf="@+id/driverAccount"
+        app:layout_constraintStart_toStartOf="@+id/driverAccount"
+        app:layout_constraintTop_toBottomOf="@+id/manageDriverVehicleDetailsConstraintLayout" />
+
+    <Button
+        android:id="@+id/manageDriverDeleteAccountButton"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="@color/scarlet"
+        android:fontFamily="@font/lato"
+        android:text="@string/admin_delete_driver_account"
+        android:textSize="18sp"
+        app:cornerRadius="8dp"
+        app:layout_constraintEnd_toEndOf="@+id/manageDriverBlockAccountButton"
+        app:layout_constraintStart_toStartOf="@+id/manageDriverBlockAccountButton"
+        app:layout_constraintTop_toBottomOf="@+id/manageDriverBlockAccountButton" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/adminManageDriverProfileBottomConstraint"
+        android:layout_width="0dp"
+        android:layout_height="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/manageDriverDeleteAccountButton">
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

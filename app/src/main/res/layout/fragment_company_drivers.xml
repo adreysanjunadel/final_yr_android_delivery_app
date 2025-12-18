@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nested_scroll_company_staff"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".user.company.FragmentCompanyDrivers">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/companyDriversConstraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/cover_blue"
+        tools:context=".user.company.FragmentCompanyDrivers">
+
+        <TextView
+            android:id="@+id/companyDriverTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:fontFamily="@font/lato"
+            android:text="@string/company_driver"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/companyCurrentDriverTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="16dp"
+            android:fontFamily="@font/lato"
+            android:text="@string/company_current_driver"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="@+id/companyDriverTextView"
+            app:layout_constraintStart_toStartOf="@+id/companyDriverTextView"
+            app:layout_constraintTop_toBottomOf="@+id/companyDriverTextView" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/companyExistingDriverConstraintLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/companyExistingDriverFillConstraint">
+
+            <EditText
+                android:id="@+id/searchCompanyDriverEmailEditText"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/edit_text_border"
+                android:backgroundTint="@color/bluegreen"
+                android:ems="10"
+                android:fontFamily="@font/lato"
+                android:hint="@string/company_search_driver"
+                android:inputType="textEmailAddress"
+                android:padding="12dp"
+                android:textColor="@color/bluegreen"
+                android:textColorHint="@color/lightbluegreen"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/searchCompanyDriversButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:backgroundTint="@color/lightbluegreen"
+                android:fontFamily="@font/lato"
+                android:text="@string/search"
+                android:textSize="18sp"
+                app:cornerRadius="8dp"
+                app:layout_constraintEnd_toEndOf="@+id/searchCompanyDriverEmailEditText"
+                app:layout_constraintStart_toStartOf="@+id/searchCompanyDriverEmailEditText"
+                app:layout_constraintTop_toBottomOf="@+id/searchCompanyDriverEmailEditText" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/searchedCompanyDriversRecyclerView"
+                android:layout_width="0dp"
+                android:layout_height="200dp"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/edit_text_border"
+                android:backgroundTint="@color/bluegreen"
+                android:padding="12dp"
+                app:layout_constraintEnd_toEndOf="@+id/searchCompanyDriversButton"
+                app:layout_constraintStart_toStartOf="@+id/searchCompanyDriversButton"
+                app:layout_constraintTop_toBottomOf="@+id/searchCompanyDriversButton" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/addCompanyDriversTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="16dp"
+            android:fontFamily="@font/lato"
+            android:text="@string/company_add_driver"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="@+id/companyDriverTextView"
+            app:layout_constraintStart_toStartOf="@+id/companyDriverTextView"
+            app:layout_constraintTop_toBottomOf="@+id/companyExistingDriverConstraintLayout" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/companyExistingDriverFillConstraint"
+            android:layout_width="0dp"
+            android:layout_height="32dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/companyCurrentDriverTextView">
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/companyNewDriverFillerConstraint"
+            android:layout_width="0dp"
+            android:layout_height="32dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/addCompanyDriversTextView">
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/existingDriversConstraintLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/companyNewDriverFillerConstraint">
+
+            <EditText
+                android:id="@+id/editTextTextEmailAddress3"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/edit_text_border"
+                android:backgroundTint="@color/bluegreen"
+                android:ems="10"
+                android:fontFamily="@font/lato"
+                android:hint="@string/company_search_new_driver"
+                android:inputType="textEmailAddress"
+                android:padding="12dp"
+                android:textColor="@color/bluegreen"
+                android:textColorHint="@color/lightbluegreen"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/searchDriversButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:backgroundTint="@color/bluegreen"
+                android:fontFamily="@font/lato"
+                android:text="@string/search"
+                android:textSize="18sp"
+                app:cornerRadius="8dp"
+                app:layout_constraintEnd_toEndOf="@+id/editTextTextEmailAddress3"
+                app:layout_constraintStart_toStartOf="@+id/editTextTextEmailAddress3"
+                app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress3" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/searchedDriverRecyclerView"
+                android:layout_width="0dp"
+                android:layout_height="300dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/edit_text_border"
+                android:backgroundTint="@color/bluegreen"
+                android:padding="12dp"
+                app:layout_constraintEnd_toEndOf="@+id/searchDriversButton"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/searchDriversButton"
+                app:layout_constraintTop_toBottomOf="@+id/searchDriversButton" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ImageView
+            android:id="@+id/currentDriversCollapsible"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginEnd="16dp"
+            android:src="@drawable/ic_arrow_up"
+            app:layout_constraintBottom_toBottomOf="@+id/companyCurrentDriverTextView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/companyCurrentDriverTextView"
+            app:layout_constraintTop_toTopOf="@+id/companyCurrentDriverTextView" />
+
+        <ImageView
+            android:id="@+id/addCompanyDriversCollapsible"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginEnd="16dp"
+            android:src="@drawable/ic_arrow_up"
+            app:layout_constraintBottom_toTopOf="@+id/companyNewDriverFillerConstraint"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/addCompanyDriversTextView"
+            app:layout_constraintTop_toTopOf="@+id/addCompanyDriversTextView" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

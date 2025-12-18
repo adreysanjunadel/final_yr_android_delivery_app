@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nested_scroll"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".admin.driver_management.AdminDriverManagementHomeFragment">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/adminDriverManagementConstraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/cover_blue">
+
+        <!-- TODO: Update blank fragment layout -->
+
+        <TextView
+            android:id="@+id/driverManagementTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:fontFamily="@font/lato"
+            android:text="@string/menu_admin_driver"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/driverManagementCreateNewDriverTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="32dp"
+            android:fontFamily="@font/lato"
+            android:text="@string/driver_management_create_new_driver"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="@+id/driverManagementTextView"
+            app:layout_constraintStart_toStartOf="@+id/driverManagementTextView"
+            app:layout_constraintTop_toBottomOf="@+id/driverManagementTextView" />
+
+        <Button
+            android:id="@+id/driverManagementCreateNewDriverButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="32dp"
+            android:backgroundTint="@color/bluegreen"
+            android:fontFamily="@font/lato"
+            android:text="@string/driver_management_create_new_driver"
+            android:textSize="18sp"
+            app:cornerRadius="8dp"
+            app:layout_constraintEnd_toEndOf="@+id/driverManagementTextView"
+            app:layout_constraintStart_toStartOf="@+id/driverManagementTextView"
+            app:layout_constraintTop_toBottomOf="@+id/driverManagementCreateNewDriverTextView" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/driverManagementCreateFillerConstraint"
+            android:layout_width="0dp"
+            android:layout_height="32dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/driverManagementCreateNewDriverButton">
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/driverManagementExistingDriverTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lato"
+            android:text="@string/driver_management_existing_driver"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="@+id/driverManagementCreateNewDriverTextView"
+            app:layout_constraintStart_toStartOf="@+id/driverManagementCreateNewDriverTextView"
+            app:layout_constraintTop_toBottomOf="@+id/driverManagementCreateFillerConstraint" />
+
+        <ImageView
+            android:id="@+id/driverManagementCreateDriverCollapsible"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginEnd="16dp"
+            android:src="@drawable/ic_arrow_up"
+            app:layout_constraintBottom_toBottomOf="@+id/driverManagementCreateNewDriverTextView"
+            app:layout_constraintEnd_toEndOf="@+id/driverManagementTextView"
+            app:layout_constraintStart_toEndOf="@+id/driverManagementCreateNewDriverTextView"
+            app:layout_constraintTop_toTopOf="@+id/driverManagementCreateNewDriverTextView" />
+
+        <ImageView
+            android:id="@+id/driverManagementExistingDriversCollapsible"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginEnd="16dp"
+            android:src="@drawable/ic_arrow_up"
+            app:layout_constraintBottom_toBottomOf="@+id/driverManagementExistingDriverTextView"
+            app:layout_constraintEnd_toEndOf="@+id/driverManagementTextView"
+            app:layout_constraintStart_toEndOf="@+id/driverManagementExistingDriverTextView"
+            app:layout_constraintTop_toTopOf="@+id/driverManagementExistingDriverTextView" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/existingDriversFillerConstraintLayout"
+            android:layout_width="0dp"
+            android:layout_height="32dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/driverManagementExistingDriverTextView">
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/driverManagementExistingDriverConstraintLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="32dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/existingDriversFillerConstraintLayout">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/driverManagementExistingDriversRecycleView"
+                android:layout_width="0dp"
+                android:layout_height="400dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="32dp"
+                android:background="@drawable/edit_text_border"
+                android:backgroundTint="@color/bluegreen"
+                android:padding="3dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/searchDriverButton" />
+
+            <EditText
+                android:id="@+id/searchDriverEditText"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="48dp"
+                android:layout_marginEnd="48dp"
+                android:background="@drawable/edit_text_border"
+                android:backgroundTint="@color/lightbluegreen"
+                android:ems="10"
+                android:fontFamily="@font/lato"
+                android:hint="@string/company_search_new_driver"
+                android:inputType="text"
+                android:padding="12dp"
+                android:textColor="@color/bluegreen"
+                android:textColorHint="@color/lightbluegreen"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/searchDriverButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:backgroundTint="@color/lightbluegreen"
+                android:fontFamily="@font/lato"
+                android:text="@string/admin_search_drivers"
+                android:textSize="18sp"
+                app:cornerRadius="8dp"
+                app:layout_constraintEnd_toEndOf="@+id/searchDriverEditText"
+                app:layout_constraintStart_toStartOf="@+id/searchDriverEditText"
+                app:layout_constraintTop_toBottomOf="@+id/searchDriverEditText" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

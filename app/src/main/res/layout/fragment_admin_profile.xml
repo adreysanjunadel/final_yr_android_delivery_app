@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nested_scroll"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".admin.profile.AdminProfileFragment" >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/adminProfileFragmentConstraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/cover_blue"
+        tools:context=".admin.profile.AdminProfileFragment">
+
+        <!-- TODO: Update blank fragment layout -->
+
+        <Button
+            android:id="@+id/adminProfilePersonalDetailsUpdateButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
+            android:backgroundTint="@color/lightbluegreen"
+            android:fontFamily="@font/lato"
+            android:text="@string/my_admin_update_profile"
+            android:textSize="18sp"
+            app:cornerRadius="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/adminProfilePersonalDetailsConstraintLayout" />
+
+        <TextView
+            android:id="@+id/myAdminAccountTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:fontFamily="@font/lato"
+            android:text="@string/my_admin_account"
+            android:textColor="@color/orange_premium"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/adminProfilePersonalDetailsTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="32dp"
+            android:fontFamily="@font/lato"
+            android:text="@string/my_admin_personal_details"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="@+id/myAdminAccountTextView"
+            app:layout_constraintStart_toStartOf="@+id/myAdminAccountTextView"
+            app:layout_constraintTop_toBottomOf="@+id/myAdminAccountTextView" />
+
+        <ImageView
+            android:id="@+id/adminPersonalDetailsCollapsible"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginEnd="16dp"
+            android:src="@drawable/ic_arrow_up"
+            app:layout_constraintBottom_toBottomOf="@+id/adminProfilePersonalDetailsTextView"
+            app:layout_constraintEnd_toEndOf="@+id/myAdminAccountTextView"
+            app:layout_constraintStart_toEndOf="@+id/adminProfilePersonalDetailsTextView"
+            app:layout_constraintTop_toTopOf="@+id/adminProfilePersonalDetailsTextView" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/adminProfilePersonalDetailsFillerConstraint"
+            android:layout_width="0dp"
+            android:layout_height="32dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/adminProfilePersonalDetailsTextView">
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/adminProfilePersonalDetailsConstraintLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            app:layout_constraintBottom_toTopOf="@+id/adminProfilePersonalDetailsUpdateButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/adminProfilePersonalDetailsFillerConstraint">
+
+            <ImageView
+                android:id="@+id/adminProfileImageView"
+                android:layout_width="92dp"
+                android:layout_height="92dp"
+                android:src="@drawable/ic_menu_profile"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/adminProfileFirstNameEditText"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="40dp"
+                android:background="@drawable/edit_text_border"
+                android:backgroundTint="@color/orange_premium"
+                android:ems="10"
+                android:fontFamily="@font/lato"
+                android:hint="@string/text1"
+                android:inputType="text"
+                android:padding="12dp"
+                android:textColorHint="@android:color/holo_orange_light"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/adminProfileImageView" />
+
+            <EditText
+                android:id="@+id/adminProfileLastNameEditText"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/edit_text_border"
+                android:backgroundTint="@color/orange_premium"
+                android:ems="10"
+                android:fontFamily="@font/lato"
+                android:hint="@string/text2"
+                android:inputType="text"
+                android:padding="12dp"
+                android:textColorHint="@android:color/holo_orange_light"
+                app:layout_constraintEnd_toEndOf="@+id/adminProfileFirstNameEditText"
+                app:layout_constraintStart_toStartOf="@+id/adminProfileFirstNameEditText"
+                app:layout_constraintTop_toBottomOf="@+id/adminProfileFirstNameEditText" />
+
+            <EditText
+                android:id="@+id/adminProfileMobileEditText"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/edit_text_border"
+                android:backgroundTint="@color/orange_premium"
+                android:ems="10"
+                android:fontFamily="@font/lato"
+                android:hint="@string/text3"
+                android:inputType="number"
+                android:padding="12dp"
+                android:textColorHint="@android:color/holo_orange_light"
+                app:layout_constraintEnd_toEndOf="@+id/adminProfileLastNameEditText"
+                app:layout_constraintStart_toStartOf="@+id/adminProfileLastNameEditText"
+                app:layout_constraintTop_toBottomOf="@+id/adminProfileLastNameEditText" />
+
+            <EditText
+                android:id="@+id/adminProfileNICEditText"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/edit_text_border"
+                android:backgroundTint="@color/orange_premium"
+                android:ems="10"
+                android:fontFamily="@font/lato"
+                android:hint="@string/text4"
+                android:inputType="text"
+                android:padding="12dp"
+                android:textColorHint="@android:color/holo_orange_light"
+                app:layout_constraintEnd_toEndOf="@+id/adminProfileMobileEditText"
+                app:layout_constraintStart_toStartOf="@+id/adminProfileMobileEditText"
+                app:layout_constraintTop_toBottomOf="@+id/adminProfileMobileEditText" />
+
+            <EditText
+                android:id="@+id/adminProfileEmailEditText"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/edit_text_border"
+                android:backgroundTint="@color/orange_premium"
+                android:ems="10"
+                android:fontFamily="@font/lato"
+                android:hint="@string/text5"
+                android:inputType="textEmailAddress"
+                android:padding="12dp"
+                android:textColorHint="@android:color/holo_orange_light"
+                app:layout_constraintEnd_toEndOf="@+id/adminProfileNICEditText"
+                app:layout_constraintStart_toStartOf="@+id/adminProfileNICEditText"
+                app:layout_constraintTop_toBottomOf="@+id/adminProfileNICEditText" />
+
+            <TextView
+                android:id="@+id/adminProfileJoinedDateTimeTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="6dp"
+                android:layout_marginBottom="24dp"
+                android:fontFamily="@font/lato"
+                android:text="@string/my_admin_joined_datetime"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/adminProfileJoinedDatetimeValueEditText"
+                app:layout_constraintStart_toStartOf="@+id/adminProfileEmailEditText"
+                app:layout_constraintTop_toBottomOf="@+id/adminProfileEmailEditText" />
+
+            <TextView
+                android:id="@+id/adminProfileJoinedDatetimeValueEditText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:layout_marginEnd="12dp"
+                android:fontFamily="@font/lato"
+                android:text="@string/my_admin_joined_datetime_value"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="@+id/adminProfileJoinedDateTimeTextView"
+                app:layout_constraintEnd_toEndOf="@+id/adminProfileEmailEditText"
+                app:layout_constraintStart_toEndOf="@+id/adminProfileJoinedDateTimeTextView"
+                app:layout_constraintTop_toTopOf="@+id/adminProfileJoinedDateTimeTextView" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/adminUpdateProfileButtonFillerConstraint"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/adminProfilePersonalDetailsUpdateButton">
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

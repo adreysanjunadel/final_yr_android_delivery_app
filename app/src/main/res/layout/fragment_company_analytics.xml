@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/companyChartAnalysisTextView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".user.company.CompanyAnalyticsFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/companyAnalyticsFragmentConstraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/cover_blue"
+        tools:context=".user.company.CompanyAnalyticsFragment">
+
+        <!-- TODO: Update blank fragment layout -->
+        <TextView
+            android:id="@+id/textViewCompanyChartAnalysis"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:fontFamily="@font/lato"
+            android:text="@string/analysis_chart"
+            android:textSize="24sp"
+            android:textStyle="bold|italic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textViewCompanyPieChart"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="16dp"
+            android:fontFamily="@font/lato"
+            android:text="@string/pie_chart"
+            android:textSize="22sp"
+            app:layout_constraintEnd_toEndOf="@+id/textViewCompanyChartAnalysis"
+            app:layout_constraintStart_toStartOf="@+id/textViewCompanyChartAnalysis"
+            app:layout_constraintTop_toBottomOf="@+id/textViewCompanyChartAnalysis" />
+
+        <ImageView
+            android:id="@+id/companyPieChartCollapsible"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="@+id/textViewCompanyPieChart"
+            app:layout_constraintEnd_toEndOf="@+id/textViewCompanyChartAnalysis"
+            app:layout_constraintStart_toEndOf="@+id/textViewCompanyPieChart"
+            app:layout_constraintTop_toTopOf="@+id/textViewCompanyPieChart"
+            app:srcCompat="@drawable/ic_arrow_up" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/companyPieChartFillerConstraint"
+            android:layout_width="0dp"
+            android:layout_height="32dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewCompanyPieChart">
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/companyPieChartConstraintLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/companyPieChartFillerConstraint">
+
+            <com.github.mikephil.charting.charts.PieChart
+                android:id="@+id/companyPieChart"
+                android:layout_width="0dp"
+                android:layout_height="400dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="24dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/textViewCompanyBarChart"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="16dp"
+            android:fontFamily="@font/lato"
+            android:text="@string/bar_chart"
+            android:textSize="22sp"
+            app:layout_constraintEnd_toEndOf="@+id/textViewCompanyChartAnalysis"
+            app:layout_constraintStart_toStartOf="@+id/textViewCompanyChartAnalysis"
+            app:layout_constraintTop_toBottomOf="@+id/companyPieChartConstraintLayout" />
+
+        <ImageView
+            android:id="@+id/companyBarChartCollapsible"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:src="@drawable/ic_arrow_up"
+            app:layout_constraintBottom_toBottomOf="@+id/textViewCompanyBarChart"
+            app:layout_constraintEnd_toEndOf="@+id/textViewCompanyChartAnalysis"
+            app:layout_constraintStart_toEndOf="@+id/textViewCompanyBarChart"
+            app:layout_constraintTop_toTopOf="@+id/textViewCompanyBarChart" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/companyBarChartFillerConstraint"
+            android:layout_width="0dp"
+            android:layout_height="32dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewCompanyBarChart">
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/companyBarChartConstraintLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/companyBarChartFillerConstraint">
+
+            <com.github.mikephil.charting.charts.BarChart
+                android:id="@+id/companyBarChart"
+                android:layout_width="0dp"
+                android:layout_height="400dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="24dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

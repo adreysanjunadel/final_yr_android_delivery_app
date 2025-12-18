@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/driverItemConstraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/beige"
+    app:circularflow_defaultRadius="16sp">
+
+    <ImageView
+        android:id="@+id/driverItemProfileImageView"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_menu_profile" />
+
+    <TextView
+        android:id="@+id/driverItemFnameLnameTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="24dp"
+        android:fontFamily="@font/lato"
+        android:text="@string/courier_driver_fname"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/driverCallButton"
+        app:layout_constraintStart_toEndOf="@+id/driverItemProfileImageView"
+        app:layout_constraintTop_toTopOf="@+id/driverItemProfileImageView" />
+
+    <TextView
+        android:id="@+id/driverItemEmailTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:fontFamily="@font/lato"
+        android:text="@string/courier_driver_mobile"
+        android:textSize="12dp"
+        app:layout_constraintBottom_toBottomOf="@+id/driverItemProfileImageView"
+        app:layout_constraintEnd_toEndOf="@+id/driverItemFnameLnameTextView"
+        app:layout_constraintStart_toEndOf="@+id/driverItemProfileImageView" />
+
+    <ImageButton
+        android:id="@+id/driverCallButton"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="16dp"
+        android:background="@color/beige"
+        android:backgroundTint="@color/lightbluegreen"
+        android:backgroundTintMode="multiply"
+        android:cropToPadding="false"
+        android:hapticFeedbackEnabled="true"
+        android:tint="@color/beige"
+        app:layout_constraintBottom_toBottomOf="@+id/driverItemEmailTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/driverItemFnameLnameTextView"
+        app:srcCompat="@drawable/ic_call" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,415 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/existingDriverProfileConstraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/cover_blue"
+    tools:context=".user.company.ExistingDriverProfileFragment" >
+
+    <TextView
+        android:id="@+id/existingDriverProfileTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/lato"
+        android:text="@string/existing_driver_profile"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/existingDriverDetailsTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:fontFamily="@font/lato"
+        android:text="@string/existing_driver_details"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/existingDriverProfileTextView"
+        app:layout_constraintStart_toStartOf="@+id/existingDriverProfileTextView"
+        app:layout_constraintTop_toBottomOf="@+id/existingDriverProfileTextView" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/existingDriverDetailsFillerConstraint"
+        android:layout_width="0dp"
+        android:layout_height="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/existingDriverDetailsTextView">
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/existingDriverDetailsConstraintLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/existingDriverDetailsFillerConstraint">
+
+        <ImageView
+            android:id="@+id/existingDriverProfileImageView"
+            android:layout_width="92dp"
+            android:layout_height="92dp"
+            android:src="@drawable/ic_menu_profile"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/editTextText5"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/edit_text_border"
+            android:backgroundTint="@color/design_default_color_primary_variant"
+            android:ems="10"
+            android:fontFamily="@font/lato"
+            android:hint="@string/text1"
+            android:inputType="text"
+            android:padding="12dp"
+            android:textColor="@color/design_default_color_primary_variant"
+            android:textColorHint="@color/design_default_color_primary"
+            app:layout_constraintEnd_toStartOf="@+id/existingDriverLastNamelTextView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/existingDriverProfileImageView" />
+
+        <EditText
+            android:id="@+id/existingDriverLastNamelTextView"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/edit_text_border"
+            android:backgroundTint="@color/design_default_color_primary_variant"
+            android:ems="10"
+            android:fontFamily="@font/lato"
+            android:hint="Last Name"
+            android:inputType="text"
+            android:padding="12dp"
+            android:textColor="@color/design_default_color_primary_variant"
+            android:textColorHint="@color/design_default_color_primary"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/editTextText5"
+            app:layout_constraintTop_toBottomOf="@+id/existingDriverProfileImageView" />
+
+        <EditText
+            android:id="@+id/existingDriverEmailTextView"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/edit_text_border"
+            android:backgroundTint="@color/design_default_color_primary_variant"
+            android:ems="10"
+            android:fontFamily="@font/lato"
+            android:hint="@string/text5"
+            android:inputType="textEmailAddress"
+            android:padding="12dp"
+            android:textColor="@color/design_default_color_primary_variant"
+            android:textColorHint="@color/design_default_color_primary"
+            app:layout_constraintEnd_toEndOf="@+id/existingDriverLastNamelTextView"
+            app:layout_constraintStart_toStartOf="@+id/editTextText5"
+            app:layout_constraintTop_toBottomOf="@+id/editTextText5" />
+
+        <EditText
+            android:id="@+id/editTextText7"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/edit_text_border"
+            android:backgroundTint="@color/design_default_color_primary_variant"
+            android:ems="10"
+            android:fontFamily="@font/lato"
+            android:hint="@string/text3"
+            android:inputType="text"
+            android:padding="12dp"
+            android:textColor="@color/design_default_color_primary_variant"
+            android:textColorHint="@color/design_default_color_primary"
+            app:layout_constraintEnd_toEndOf="@+id/existingDriverEmailTextView"
+            app:layout_constraintStart_toStartOf="@+id/existingDriverEmailTextView"
+            app:layout_constraintTop_toBottomOf="@+id/existingDriverEmailTextView" />
+
+        <TextView
+            android:id="@+id/existingDriverDOBTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="8dp"
+            android:fontFamily="@font/lato"
+            android:text="@string/existing_driver_dob"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toStartOf="@+id/existingDriverDOBValueTextView"
+            app:layout_constraintStart_toStartOf="@+id/editTextText7"
+            app:layout_constraintTop_toBottomOf="@+id/editTextText7" />
+
+        <TextView
+            android:id="@+id/existingDriverDOBValueTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="16dp"
+            android:fontFamily="@font/lato"
+            android:text="@string/existing_driver_dob_value"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/existingDriverDOBTextView"
+            app:layout_constraintEnd_toEndOf="@+id/editTextText7"
+            app:layout_constraintStart_toEndOf="@+id/existingDriverDOBTextView"
+            app:layout_constraintTop_toTopOf="@+id/existingDriverDOBTextView" />
+
+        <TextView
+            android:id="@+id/existingDriverRatingTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:fontFamily="@font/lato"
+            android:text="@string/existing_driver_rating"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="@+id/existingDriverDOBTextView"
+            app:layout_constraintStart_toStartOf="@+id/existingDriverDOBTextView"
+            app:layout_constraintTop_toBottomOf="@+id/existingDriverDOBTextView" />
+
+        <TextView
+            android:id="@+id/existingDriverRatingValueTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lato"
+            android:text="@string/existing_driver_rating_value"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/existingDriverRatingTextView"
+            app:layout_constraintEnd_toEndOf="@+id/existingDriverDOBValueTextView"
+            app:layout_constraintStart_toStartOf="@+id/existingDriverDOBValueTextView"
+            app:layout_constraintTop_toTopOf="@+id/existingDriverRatingTextView" />
+
+        <TextView
+            android:id="@+id/existingDriverJoinedDatetimeTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:layout_marginBottom="24dp"
+            android:fontFamily="@font/lato"
+            android:text="@string/existing_driver_joined_datetime"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/existingDriverRatingTextView"
+            app:layout_constraintStart_toStartOf="@+id/existingDriverRatingTextView"
+            app:layout_constraintTop_toBottomOf="@+id/existingDriverRatingTextView" />
+
+        <TextView
+            android:id="@+id/existingDriverJoinedDatetimeValueTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lato"
+            android:text="@string/existing_driver_joined_datetime_value"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/existingDriverJoinedDatetimeTextView"
+            app:layout_constraintEnd_toEndOf="@+id/existingDriverRatingValueTextView"
+            app:layout_constraintStart_toStartOf="@+id/existingDriverRatingValueTextView"
+            app:layout_constraintTop_toTopOf="@+id/existingDriverJoinedDatetimeTextView" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/existingDriverVehicleDetailsTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:fontFamily="@font/lato"
+        android:text="@string/existing_vehicle_details"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/existingDriverDetailsTextView"
+        app:layout_constraintStart_toStartOf="@+id/existingDriverDetailsTextView"
+        app:layout_constraintTop_toBottomOf="@+id/existingDriverDetailsConstraintLayout" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/existingDriverVehicleDetailsConstraint"
+        android:layout_width="0dp"
+        android:layout_height="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/existingDriverVehicleDetailsTextView">
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/existingDriverVehicleDetailConstraintLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/existingDriverVehicleDetailsConstraint">
+
+        <TextView
+            android:id="@+id/existingDriverPlateTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="8dp"
+            android:fontFamily="@font/lato"
+            android:text="@string/existing_vehicle_driver_plate"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toStartOf="@+id/textView49"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView49"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="32dp"
+            android:fontFamily="@font/lato"
+            android:text="@string/existing_vehicle_driver_plate_value"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/existingDriverPlateTextView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/existingDriverPlateTextView"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/existingDriverVehicleTitleTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/lato"
+            android:text="@string/existing_driver_vehicle_title"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="@+id/existingDriverPlateTextView"
+            app:layout_constraintStart_toStartOf="@+id/existingDriverPlateTextView"
+            app:layout_constraintTop_toBottomOf="@+id/existingDriverPlateTextView" />
+
+        <TextView
+            android:id="@+id/existingDriverVehicleTitleValueTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lato"
+            android:text="@string/existing_driver_vehicle_title_value"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/existingDriverVehicleTitleTextView"
+            app:layout_constraintEnd_toEndOf="@+id/textView49"
+            app:layout_constraintStart_toStartOf="@+id/textView49"
+            app:layout_constraintTop_toTopOf="@+id/existingDriverVehicleTitleTextView" />
+
+        <TextView
+            android:id="@+id/existingDriverVehicleBrandTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/lato"
+            android:text="@string/existing_driver_vehicle_brand"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="@+id/existingDriverVehicleTitleTextView"
+            app:layout_constraintStart_toStartOf="@+id/existingDriverVehicleTitleTextView"
+            app:layout_constraintTop_toBottomOf="@+id/existingDriverVehicleTitleTextView" />
+
+        <TextView
+            android:id="@+id/existingDriverVehicleBrandValueTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lato"
+            android:text="@string/existing_driver_vehicle_brand_value"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/existingDriverVehicleBrandTextView"
+            app:layout_constraintEnd_toEndOf="@+id/existingDriverVehicleTitleValueTextView"
+            app:layout_constraintStart_toStartOf="@+id/existingDriverVehicleTitleValueTextView"
+            app:layout_constraintTop_toTopOf="@+id/existingDriverVehicleBrandTextView" />
+
+        <TextView
+            android:id="@+id/existingDriverVehicleModelTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/lato"
+            android:text="@string/existing_driver_vehicle_model"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="@+id/existingDriverVehicleBrandTextView"
+            app:layout_constraintStart_toStartOf="@+id/existingDriverVehicleBrandTextView"
+            app:layout_constraintTop_toBottomOf="@+id/existingDriverVehicleBrandTextView" />
+
+        <TextView
+            android:id="@+id/existingDriverVehicleModelValueTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lato"
+            android:text="@string/existing_driver_vehicle_model_value"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/existingDriverVehicleModelTextView"
+            app:layout_constraintEnd_toEndOf="@+id/existingDriverVehicleBrandValueTextView"
+            app:layout_constraintStart_toStartOf="@+id/existingDriverVehicleBrandValueTextView"
+            app:layout_constraintTop_toTopOf="@+id/existingDriverVehicleModelTextView" />
+
+        <TextView
+            android:id="@+id/existingDriverVehicleTypeTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="24dp"
+            android:fontFamily="@font/lato"
+            android:text="@string/existing_driver_vehicle_type"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/existingDriverVehicleModelTextView"
+            app:layout_constraintStart_toStartOf="@+id/existingDriverVehicleModelTextView"
+            app:layout_constraintTop_toBottomOf="@+id/existingDriverVehicleModelTextView" />
+
+        <TextView
+            android:id="@+id/existingDriverVehicleTypeValueText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lato"
+            android:text="@string/existing_driver_vehicle_type_value"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/existingDriverVehicleTypeTextView"
+            app:layout_constraintEnd_toEndOf="@+id/existingDriverVehicleModelValueTextView"
+            app:layout_constraintStart_toStartOf="@+id/existingDriverVehicleModelValueTextView"
+            app:layout_constraintTop_toTopOf="@+id/existingDriverVehicleTypeTextView" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:id="@+id/hireExistingDriverButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:backgroundTint="@color/lightbluegreen"
+        android:fontFamily="@font/lato"
+        android:text="@string/hire_company_driver_button"
+        android:textSize="18sp"
+        app:cornerRadius="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/existingDriverDetailsCollapsible"
+        app:layout_constraintStart_toStartOf="@+id/existingDriverDetailsTextView"
+        app:layout_constraintTop_toBottomOf="@+id/existingDriverVehicleDetailConstraintLayout" />
+
+    <ImageView
+        android:id="@+id/existingDriverDetailsCollapsible"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="32dp"
+        android:src="@drawable/ic_arrow_up"
+        app:layout_constraintBottom_toTopOf="@+id/existingDriverDetailsFillerConstraint"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/existingDriverDetailsTextView"
+        app:layout_constraintTop_toTopOf="@+id/existingDriverDetailsTextView" />
+
+    <ImageView
+        android:id="@+id/existingDriverVehicleDetailsCollapsible"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="32dp"
+        android:src="@drawable/ic_arrow_up"
+        app:layout_constraintBottom_toTopOf="@+id/existingDriverVehicleDetailsConstraint"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/existingDriverVehicleDetailsTextView"
+        app:layout_constraintTop_toTopOf="@+id/existingDriverVehicleDetailsTextView" />
+</androidx.constraintlayout.widget.ConstraintLayout>

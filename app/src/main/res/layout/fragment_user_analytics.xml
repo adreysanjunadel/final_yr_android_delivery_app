@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/companyChartAnalysisScrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".user.analytics.UserAnalyticsFragment">
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/userAnalyticsFragmentConstraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/cover_blue"
+    tools:context=".user.activities.UserHomeActivity">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:id="@+id/userChartAnalysisTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/lato"
+        android:text="@string/analysis_chart"
+        android:textSize="24sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/userPieChartTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/lato"
+        android:text="@string/pie_chart"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="@+id/userChartAnalysisTextView"
+        app:layout_constraintStart_toStartOf="@+id/userChartAnalysisTextView"
+        app:layout_constraintTop_toBottomOf="@+id/userChartAnalysisTextView" />
+
+    <ImageView
+        android:id="@+id/userPieChartCollapsible"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/userPieChartTextView"
+        app:layout_constraintEnd_toEndOf="@+id/userChartAnalysisTextView"
+        app:layout_constraintStart_toEndOf="@+id/userPieChartTextView"
+        app:layout_constraintTop_toTopOf="@+id/userPieChartTextView"
+        app:srcCompat="@drawable/ic_arrow_up" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/userPieChartFillerConstraint"
+        android:layout_width="0dp"
+        android:layout_height="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/userPieChartTextView">
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/userPieChartConstraintLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/userPieChartFillerConstraint">
+
+        <com.github.mikephil.charting.charts.PieChart
+            android:id="@+id/userPieChart"
+            android:layout_width="0dp"
+            android:layout_height="400dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/textView35"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/lato"
+        android:text="@string/bar_chart"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="@+id/userChartAnalysisTextView"
+        app:layout_constraintStart_toStartOf="@+id/userChartAnalysisTextView"
+        app:layout_constraintTop_toBottomOf="@+id/userPieChartConstraintLayout" />
+
+    <ImageView
+        android:id="@+id/userBarChartCollapsible"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView35"
+        app:layout_constraintEnd_toEndOf="@+id/userChartAnalysisTextView"
+        app:layout_constraintStart_toEndOf="@+id/textView35"
+        app:layout_constraintTop_toTopOf="@+id/textView35"
+        app:srcCompat="@drawable/ic_arrow_up" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/userBarChartFillerConstraint"
+        android:layout_width="0dp"
+        android:layout_height="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView35">
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/userBarChartConstraintLayout"
+        android:layout_width="0dp"
+        android:layout_height="357dp"
+        android:layout_marginBottom="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/userBarChartFillerConstraint">
+
+        <com.github.mikephil.charting.charts.BarChart
+            android:id="@+id/userBarChart"
+            android:layout_width="0dp"
+            android:layout_height="350dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

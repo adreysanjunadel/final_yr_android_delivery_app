@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/admin_menu_item_home"
+            android:icon="@drawable/ic_menu_home"
+            android:title="@string/menu_admin_home"/>
+
+        <item
+            android:id="@+id/admin_menu_item_account_management"
+            android:icon="@drawable/ic_menu_server_management"
+            android:title="@string/menu_admin_account_management"/>
+
+        <item android:id="@+id/admin_menu_item_driver_management"
+            android:icon="@drawable/ic_menu_driver"
+            android:title="@string/menu_admin_driver"/>
+
+        <item
+            android:id="@+id/admin_menu_item_security"
+            android:icon="@drawable/ic_menu_system_approvals"
+            android:title="@string/menu_admin_security"/>
+
+        <item
+            android:id="@+id/admin_menu_item_profile"
+            android:icon="@drawable/ic_menu_profile"
+            android:title="@string/menu_admin_profile"/>
+
+    </group>
+</menu>

@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mapsActivityConstraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/courier_img"
+    tools:context=".user.activities.LogInActivity">
+
+    <Button
+        android:id="@+id/buttonSignUp2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="@color/marine"
+        android:fontFamily="@font/lato"
+        android:outlineProvider="paddedBounds"
+        android:text="@string/logintext3"
+        android:textSize="18sp"
+        app:cornerRadius="11dp"
+        app:layout_constraintEnd_toEndOf="@+id/buttonLogIn2"
+        app:layout_constraintStart_toStartOf="@+id/buttonLogIn2"
+        app:layout_constraintTop_toBottomOf="@+id/buttonLogIn2" />
+
+    <Button
+        android:id="@+id/buttonLogIn2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:backgroundTint="@color/bluegreen"
+        android:fontFamily="@font/lato"
+        android:outlineProvider="paddedBounds"
+        android:text="@string/logintext2"
+        android:textSize="18sp"
+        app:cornerRadius="11dp"
+        app:layout_constraintEnd_toEndOf="@+id/editTextEmail2"
+        app:layout_constraintStart_toStartOf="@+id/editTextEmail2"
+        app:layout_constraintTop_toBottomOf="@+id/editTextEmail2" />
+
+    <EditText
+        android:id="@+id/editTextEmail2"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
+        android:background="@drawable/edit_text_border"
+        android:backgroundTint="@color/bluegreen"
+        android:ems="10"
+        android:fontFamily="@font/lato"
+        android:hint="@string/text5"
+        android:inputType="textEmailAddress"
+        android:padding="12dp"
+        android:textColor="@color/bluegreen"
+        android:textColorHint="@color/lightbluegreen"
+        app:layout_constraintEnd_toEndOf="@+id/textView"
+        app:layout_constraintStart_toStartOf="@+id/textView6"
+        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/lato"
+        android:text="@string/logintext2"
+        android:textColor="@color/bluegreen"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/textView5"
+        app:layout_constraintStart_toStartOf="@+id/textView5"
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="18dp"
+        android:fontFamily="@font/lato"
+        android:text="@string/logintext1"
+        android:textAlignment="center"
+        android:textColor="@color/orange_premium"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="18dp"
+        android:fontFamily="@font/lato_regular"
+        android:letterSpacing="0.04"
+        android:text="@string/main1text1"
+        android:textColor="@color/marine"
+        android:textSize="23sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/imageView2"
+        app:layout_constraintTop_toTopOf="@+id/imageView2"
+        app:layout_constraintVertical_bias="0.513" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_logo" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nested_scroll_user_courier"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".user.home.UserCourierRequestFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/userCourierRequestConstraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/cover_blue"
+        tools:context=".user.home.UserCourierRequestFragment">
+
+        <!-- TODO: Update blank fragment layout -->
+
+        <EditText
+            android:id="@+id/userEditTextItemTitle"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/edit_text_border"
+            android:backgroundTint="@color/marine"
+            android:ems="10"
+            android:hint="@string/courier_item_title"
+            android:inputType="text"
+            android:padding="12dp"
+            android:textColorHint="@color/lighterblue"
+            app:layout_constraintEnd_toEndOf="@+id/userQuantityEditText"
+            app:layout_constraintStart_toStartOf="@+id/userItemPriceEditText"
+            app:layout_constraintTop_toBottomOf="@+id/userItemPriceEditText" />
+
+        <TextView
+            android:id="@+id/userDriverTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="24dp"
+            android:fontFamily="@font/lato"
+            android:text="@string/courier_driver"
+            android:textColor="@color/marine"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/userEditTextItemTitle" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/userDriverRecyclerView"
+            android:layout_width="0dp"
+            android:layout_height="300dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/edit_text_border"
+            android:backgroundTint="@color/marine"
+            android:padding="12dp"
+            app:layout_constraintEnd_toEndOf="@+id/userDriverTextView"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/userDriverTextView"
+            app:layout_constraintTop_toBottomOf="@+id/userDriverTextView" />
+
+        <TextView
+            android:id="@+id/textViewUserCourier"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:fontFamily="@font/lato"
+            android:text="@string/user_courier_request"
+            android:textColor="@color/marine"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/editTextUserDestination"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/edit_text_border"
+            android:backgroundTint="@color/marine"
+            android:ems="10"
+            android:fontFamily="@font/lato"
+            android:hint="@string/courier_destination"
+            android:inputType="text"
+            android:padding="12dp"
+            android:textColorHint="@color/lighterblue"
+            app:layout_constraintEnd_toEndOf="@+id/textViewUserCourier"
+            app:layout_constraintStart_toStartOf="@+id/textViewUserCourier"
+            app:layout_constraintTop_toBottomOf="@+id/userStartLocationEditText" />
+
+        <TextView
+            android:id="@+id/textViewItemDetails"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="24dp"
+            android:fontFamily="@font/lato"
+            android:text="@string/courier_item_details"
+            android:textColor="@color/marine"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/userCourierRequestVehicleTypeSpinner" />
+
+        <Spinner
+            android:id="@+id/userItemCategorySpinner"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/edit_text_border"
+            android:backgroundTint="@color/marine"
+            android:padding="12dp"
+            app:layout_constraintEnd_toEndOf="@+id/textViewItemDetails"
+            app:layout_constraintStart_toStartOf="@+id/textViewItemDetails"
+            app:layout_constraintTop_toBottomOf="@+id/textViewItemDetails" />
+
+        <Spinner
+            android:id="@+id/userItemBrandSpinner"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/edit_text_border"
+            android:backgroundTint="@color/marine"
+            android:padding="12dp"
+            app:layout_constraintEnd_toStartOf="@+id/userItemModelSpinner"
+            app:layout_constraintStart_toStartOf="@+id/userItemCategorySpinner"
+            app:layout_constraintTop_toBottomOf="@+id/userItemCategorySpinner" />
+
+        <Spinner
+            android:id="@+id/userItemModelSpinner"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/edit_text_border"
+            android:backgroundTint="@color/marine"
+            android:padding="12dp"
+            app:layout_constraintEnd_toEndOf="@+id/userItemCategorySpinner"
+            app:layout_constraintStart_toEndOf="@+id/userItemBrandSpinner"
+            app:layout_constraintTop_toBottomOf="@+id/userItemCategorySpinner" />
+
+        <EditText
+            android:id="@+id/userItemPriceEditText"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/edit_text_border"
+            android:backgroundTint="@color/marine"
+            android:ems="10"
+            android:fontFamily="@font/lato"
+            android:hint="@string/courier_item_price"
+            android:inputType="numberDecimal"
+            android:padding="12dp"
+            android:textColorHint="@color/lighterblue"
+            app:layout_constraintEnd_toStartOf="@+id/userQuantityEditText"
+            app:layout_constraintStart_toStartOf="@+id/userItemBrandSpinner"
+            app:layout_constraintTop_toBottomOf="@+id/userItemBrandSpinner" />
+
+        <EditText
+            android:id="@+id/userQuantityEditText"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/edit_text_border"
+            android:backgroundTint="@color/marine"
+            android:ems="10"
+            android:fontFamily="@font/lato"
+            android:hint="@string/courier_item_quantity"
+            android:inputType="numberDecimal"
+            android:padding="12dp"
+            android:textColorHint="@color/lighterblue"
+            app:layout_constraintEnd_toEndOf="@+id/userItemModelSpinner"
+            app:layout_constraintStart_toEndOf="@+id/userItemPriceEditText"
+            app:layout_constraintTop_toBottomOf="@+id/userItemModelSpinner" />
+
+        <Button
+            android:id="@+id/userCourierSubmitButton"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="32dp"
+            android:backgroundTint="@color/marine"
+            android:fontFamily="@font/lato"
+            android:text="@string/courier_submit"
+            android:textSize="20sp"
+            app:cornerRadius="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/userDriverRecyclerView"
+            app:layout_constraintStart_toStartOf="@+id/userDriverRecyclerView"
+            app:layout_constraintTop_toBottomOf="@+id/userDriverRecyclerView" />
+
+        <EditText
+            android:id="@+id/userStartLocationEditText"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/edit_text_border"
+            android:backgroundTint="@color/marine"
+            android:ems="10"
+            android:fontFamily="@font/lato"
+            android:hint="@string/company_past_order_start_location"
+            android:inputType="text"
+            android:padding="12dp"
+            android:textColorHint="@color/lighterblue"
+            app:layout_constraintEnd_toEndOf="@+id/textViewUserCourier"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/textViewUserCourier"
+            app:layout_constraintTop_toBottomOf="@+id/textViewUserCourier" />
+
+        <Spinner
+            android:id="@+id/userCourierRequestVehicleTypeSpinner"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/edit_text_border"
+            android:backgroundTint="@color/marine"
+            android:padding="12dp"
+            app:layout_constraintEnd_toEndOf="@+id/editTextUserDestination"
+            app:layout_constraintStart_toStartOf="@+id/editTextUserDestination"
+            app:layout_constraintTop_toBottomOf="@+id/editTextUserDestination" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

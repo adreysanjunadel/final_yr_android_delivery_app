@@ -1,0 +1,357 @@
+<resources>
+    <string name="app_name">SwiftEx</string>
+
+    <!-- User -->
+    <string name="main1text1">Fast couriers redefined</string>
+    <string name="main1text2">Sign Up</string>
+    <string name="main1text3">Have an Account? Log In</string>
+    <string name="main1text4">Welcome to SwiftEx!</string>
+    <string name="main1text5">Admin Login</string>
+
+    <string name="logintext1">Welcome Back!</string>
+    <string name="logintext2">Log In</string>
+    <string name="logintext3">New to SwiftEx? Create Account</string>
+
+    <string name="verifytext1">Verification User Account...</string>
+    <string name="verifytext2">Verification</string>
+    <string name="shaketext1">Shake your phone
+        to send Verification Code</string>
+    <string name="verifytext3">Back to Login</string>
+    <string name="verifytext4">Code Sent Successfully, Kindly check your email</string>
+    <string name="verifytext5">Your Code Here</string>
+    <string name="verifytext6">Verify</string>
+
+    <string name="text1">First Name</string>
+    <string name="text2">Last Name</string>
+    <string name="text3">Mobile</string>
+    <string name="text4">National ID Card</string>
+    <string name="text5">Email</string>
+    <!-- User -->
+
+    <string name="adminlogintext1">Welcome Back Admin!</string>
+    <string name="adminlogintext2">Admin Login</string>
+    <string name="adminlogintext3">Back</string>
+    <string name="adminlogintext4">Verifying Admin Account...</string>
+    <string name="adminlogintext5">Back to Admin Login</string>
+    <string name="adminlogintext6">Admin Verification</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_profile">Profile</string>
+    <string name="menu_history">History</string>
+    <string name="menu_company">Company</string>
+    <string name="menu_analytics">Analytics</string>
+
+    <string name="home_fragment_test">Hello Home fragment</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="profile_fragment_test">Hello Profile fragment</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="history_fragment_test">Hello History fragment</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_company_fragment">Hello Company fragment</string>
+    <string name="hello_analytics_fragment">Hello Analytics fragment</string>
+
+    <string name="menu_admin_home">Admin Home</string>
+    <string name="menu_admin_security">Security</string>
+    <string name="menu_admin_account_management">Account Management</string>
+    <string name="menu_admin_company">Server Analytics</string>
+    <string name="menu_admin_profile">Admin Profile</string>
+    <string name="menu_admin_driver">Driver Management</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_admin_home_fragment">Hello Admin Home fragment</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_admin_system_approvals_fragment">Hello System Approvals fragment</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_admin_server_management_fragment">Hello Admin Server Management fragment</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_admin_profile_fragment">Hello Admin Profile fragment</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="action_log_out">Log Out</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_driver_management_fragment">Hello Driver Management fragment</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="company_dashboard_button1">Company Courier Request</string>
+
+    <string name="user_courier_request">User Courier Request</string>
+
+    <string name="company_dashboard_button2">Orders</string>
+    <string name="company_dashboard_button3">Manage Staff</string>
+    <string name="company_dashboard_button4">Profile</string>
+
+    <string name="courier_destination">Destination</string>
+    <string name="courier_destination_start">Start Location</string>
+    <string name="courier_destination_end">End Location</string>
+
+    <string name="courier_item_details">Item Details</string>
+    <string name="courier_item_title">Title</string>
+    <string name="courier_item_category">Category</string>
+    <string name="courier_item_brand">Brand</string>
+    <string name="courier_item_model">Model</string>
+    <string name="courier_item_price">Item Price</string>
+    <string name="courier_item_quantity">Quantity</string>
+
+    <string name="courier_driver">Driver</string>
+    <string name="courier_driver_fname">First Name</string>
+    <string name="courier_driver_lname">Last Name</string>
+    <string name="courier_driver_mobile">Mobile</string>
+    <string name="courier_driver_datetime">Joined Datetime</string>
+
+    <string name="courier_submit">Submit Request</string>
+
+    <string name="analysis_chart">Chart Analysis</string>
+    <string name="pie_chart">Pie Chart</string>
+    <string name="bar_chart">Bar Chart</string>
+
+    <string name="user_profile">User Account</string>
+    <string name="user_profile_details">Personal Details</string>
+    <string name="user_details_save">Save User Details</string>
+    <string name="user_address_details">Address Details</string>
+
+    <string name="address_no">No.</string>
+    <string name="address_street1">Street 1</string>
+    <string name="address_street2">Street 2</string>
+    <string name="address_details_save">Save Address Details</string>
+
+    <string name="company_profile">Company Profile</string>
+    <string name="company_create_new_profile">Create Company Profile</string>
+    <string name="company_create_details">Company Details</string>
+    <string name="company_create_name">Company Name</string>
+    <string name="company_create_address_details">Company Address Details</string>
+    <string name="company_create_account">Create Company Account</string>
+    <string name="company_details_update">Update Company Profile</string>
+
+    <string name="manage_staff">Manage Staff</string>
+    <string name="manage_drivers">Manage Drivers</string>
+
+    <string name="user_history">Order History</string>
+
+    <string name="company_staff">Company Staff</string>
+    <string name="company_search_user">Search Company User Email</string>
+    <string name="company_current_staff">Company Current Staff</string>
+    <string name="company_add_staff">Add Company Staff</string>
+    <string name="company_search_new_staff">Search User Email</string>
+
+    <string name="search">Search</string>
+
+    <string name="existing_profile">Existing Staff Profile</string>
+    <string name="existing_staff_details">Staff User Details</string>
+    <string name="existing_since">Member Since: </string>
+    <string name="existing_datetime">Jan 01, 2024, 08:52:35AM</string>
+    <string name="existing_staff_update">Update Staff User</string>
+    <string name="existing_staff_delete">Delete Staff User</string>
+
+    <string name="nonexisting_user_profile">Add User Profile</string>
+    <string name="nonexisting_staff_details">User Details</string>
+    <string name="nonexisting_joineddatetime">Joined Datetime: </string>
+    <string name="nonexisting_datetime">Jan 01, 2024, 08:52:35AM</string>
+    <string name="nonexisting_add">Hire User</string>
+
+    <string name="company_driver">Company Drivers</string>
+    <string name="company_search_driver">Search Company Driver Email</string>
+    <string name="company_current_driver">Company Current Drivers</string>
+    <string name="company_add_driver">Add Company Drivers</string>
+    <string name="company_search_new_driver">Search Driver Email</string>
+
+    <string name="company_orders_dashboard_order_history">Order History</string>
+    <string name="company_orders_dashboard_company_analytics">Company Analytics</string>
+
+    <string name="company_history">Company History</string>
+    <string name="company_past">Past</string>
+
+    <string name="user_past_order">Past User Order</string>
+    <string name="user_past_order_details">Order Details</string>
+    <string name="user_past_order_id">Order ID</string>
+    <string name="user_past_order_value">xx</string>
+    <string name="user_past_order_driver_id">Driver ID</string>
+    <string name="user_past_order_driver_value">xa</string>
+    <string name="user_past_order_payload_id">Payload ID</string>
+    <string name="user_past_order_payload_value">xb</string>
+    <string name="user_past_order_price">Price (LKR)</string>
+    <string name="user_past_order_price_value">xlkr</string>
+    <string name="user_past_order_start_location">Start Location</string>
+    <string name="user_past_order_start_location_value">loc a</string>
+    <string name="user_past_order_end_location">End Location</string>
+    <string name="user_past_order_end_location_value">loc b</string>
+    <string name="user_past_order_start_datetime">Start Datetime</string>
+    <string name="user_past_order_start_datetime_value">Jan XX, 2000, hh:mm a</string>
+    <string name="user_past_order_end_datetime">End Datetime</string>
+    <string name="user_past_order_end_datetime_value">Jan XX, 2000, hh:mm p</string>
+    <string name="user_past_order_submit_ratings">Submit Ratings</string>
+    <string name="user_past_order_item_details">Item Details</string>
+    <string name="user_past_order_item_qty">Total Quantity</string>
+    <string name="user_past_order_item_qty_value">x</string>
+    <string name="user_past_order_item_esv">Total Estimated Value (LKR)</string>
+    <string name="user_past_order_item_esv_value">xx</string>
+    <string name="user_past_order_items">a,
+    b,
+    c,</string>
+
+    <string name="company_past_order">Past Company Order</string>
+    <string name="company_past_order_details">Order Details</string>
+    <string name="company_past_order_id">Order ID</string>
+    <string name="company_past_order_value">xx</string>
+    <string name="company_past_order_from_company_id">From Company</string>
+    <string name="company_past_order_from_company_value">company a</string>
+    <string name="company_past_order_to_company_id">To Company</string>
+    <string name="company_past_order_to_company_value">company b</string>
+    <string name="company_past_order_driver_id">Driver ID</string>
+    <string name="company_past_order_driver_value">xa</string>
+    <string name="company_past_order_payload_id">Payload ID</string>
+    <string name="company_past_order_payload_value">xb</string>
+    <string name="company_past_order_price">Price (LKR)</string>
+    <string name="company_past_order_price_value">xlkr</string>
+    <string name="company_past_order_start_location">Start Location</string>
+    <string name="company_past_order_start_location_value">loc a</string>
+    <string name="company_past_order_end_location">End Location</string>
+    <string name="company_past_order_end_location_value">loc b</string>
+    <string name="company_past_order_start_datetime">Start Datetime</string>
+    <string name="company_past_order_start_datetime_value">Jan XX, 2000, hh:mm a</string>
+    <string name="company_past_order_end_datetime">End Datetime</string>
+    <string name="company_past_order_end_datetime_value">Jan XX, 2000, hh:mm p</string>
+    <string name="company_past_order_submit_ratings">Submit Ratings</string>
+    <string name="company_past_order_item_details">Item Details</string>
+    <string name="company_past_order_item_qty">Total Quantity</string>
+    <string name="company_past_order_item_qty_value">x</string>
+    <string name="company_past_order_item_esv">Total Estimated Value (LKR)</string>
+    <string name="company_past_order_item_esv_value">xx</string>
+    <string name="company_past_order_items">a,
+    b,
+    c,</string>
+
+    <string name="existing_company_driver_profile">Existing Company Driver Profile</string>
+    <string name="existing_company_driver_details">Company Driver Details</string>
+    <string name="existing_company_driver_dob">Date of Birth: </string>
+    <string name="existing_company_driver_dob_value">Jan 4, 2000, 12:31:27PM </string>
+    <string name="existing_company_driver_rating">Rating </string>
+    <string name="existing_company_driver_rating_value">4.6 </string>
+    <string name="existing_company_driver_member_since">Member Since: </string>
+    <string name="existing_company_driver_member_since_datetime">Jan 14, 2025, 12:31:27PM </string>
+
+    <string name="existing_company_vehicle_details">Vehicle Details</string>
+    <string name="existing_company_vehicle_driver_plate">Vehicle Driver Plate</string>
+    <string name="existing_company_vehicle_driver_plate_value">WP KX 3220</string>
+    <string name="existing_company_driver_vehicle_title">Title</string>
+    <string name="existing_company_driver_vehicle_title_value">Isuzu Mux</string>
+    <string name="existing_company_driver_vehicle_brand">Brand</string>
+    <string name="existing_company_driver_vehicle_brand_value">Isuzu</string>
+    <string name="existing_company_driver_vehicle_model">Model</string>
+    <string name="existing_company_driver_vehicle_model_value">Mux</string>
+    <string name="existing_company_driver_vehicle_type">Type</string>
+    <string name="existing_company_driver_vehicle_type_value">Small Truck</string>
+    <string name="delete_company_driver_button">Delete Company Driver</string>
+
+    <string name="existing_driver_profile">Existing Driver Profile</string>
+    <string name="existing_driver_details">Driver Details</string>
+    <string name="existing_driver_dob">Date of Birth: </string>
+    <string name="existing_driver_dob_value">Jan 4, 2000, 12:31:27PM </string>
+    <string name="existing_driver_rating">Rating </string>
+    <string name="existing_driver_rating_value">4.6 </string>
+    <string name="existing_driver_joined_datetime">Joined Datetime: </string>
+    <string name="existing_driver_joined_datetime_value">Jan 14, 2025, 12:31:27PM </string>
+
+    <string name="existing_vehicle_details">Vehicle Details</string>
+    <string name="existing_vehicle_driver_plate">Vehicle Driver Plate</string>
+    <string name="existing_vehicle_driver_plate_value">WP AX 1234</string>
+    <string name="existing_driver_vehicle_title">Title</string>
+    <string name="existing_driver_vehicle_title_value">Isuzu Mux</string>
+    <string name="existing_driver_vehicle_brand">Brand</string>
+    <string name="existing_driver_vehicle_brand_value">Isuzu</string>
+    <string name="existing_driver_vehicle_model">Model</string>
+    <string name="existing_driver_vehicle_model_value">Mux</string>
+    <string name="existing_driver_vehicle_type">Type</string>
+    <string name="existing_driver_vehicle_type_value">Small Truck</string>
+    <string name="hire_company_driver_button">Hire Company Driver</string>
+
+    <string name="my_admin_account">My Admin Account</string>
+    <string name="my_admin_personal_details">Personal Details</string>
+    <string name="my_admin_update_profile">Update Profile</string>
+    <string name="my_admin_joined_datetime">Admin Joined Datetime</string>
+    <string name="my_admin_joined_datetime_value">Jan 21, 2025, 08:59:59</string>
+
+    <string name="driver_management">Driver Management</string>
+    <string name="driver_management_create_new_driver">Create New Driver</string>
+    <string name="driver_management_create_driver">Create Driver</string>
+    <string name="driver_management_existing_driver">Existing Drivers</string>
+
+    <string name="admin_create_driver_account">Driver Account</string>
+    <string name="admin_create_driver_personal_details">Personal Details</string>
+    <string name="admin_create_driver_dob">Date of Birth</string>
+    <string name="admin_create_driver">Create Driver Account</string>
+    <string name="admin_update_driver">Update Driver Account</string>
+    <string name="admin_create_driver_vehicle_details">Vehicle Details</string>
+    <string name="admin_create_driver_vehicle_plate">Vehicle Plate</string>
+    <string name="admin_create_driver_vehicle_title">Vehicle Title</string>
+    <string name="admin_create_driver_vehicle_brand">Vehicle Brand</string>
+    <string name="admin_create_driver_vehicle_model">Vehicle Model</string>
+    <string name="admin_create_driver_vehicle_type">Vehicle Type</string>
+    <string name="admin_create_driver_add_vehicle_details">Add Vehicle Details</string>
+    <string name="admin_create_driver_update_vehicle_details">Update Vehicle Details</string>
+    <string name="admin_block_driver_account">Block Driver Account</string>
+    <string name="admin_delete_driver_account">Delete Driver Account</string>
+
+    <string name="button_uam">User Management</string>
+    <string name="button_ucm">Company Management</string>
+
+    <string name="admin_user_management">User Management</string>
+    <string name="admin_user_management_new_user">Create New User</string>
+    <string name="admin_user_management_update_user">Update Personal Details</string>
+    <string name="admin_user_management_user_address_create">Create Address</string>
+    <string name="admin_user_management_user_address_update">Update Address</string>
+    <string name="admin_user_management_block_user">Block User</string>
+    <string name="admin_user_management_delete_user">Delete User</string>
+    <string name="admin_user_management_existing_user">Existing Users</string>
+
+    <string name="admin_company_create_new">Create New Company</string>
+    <string name="admin_existing_companies">Existing Companies</string>
+    <string name="company_account">Company Account</string>
+    <string name="company_account_block">Block Company Account</string>
+    <string name="company_account_delete">Delete Company Account</string>
+
+    <string name="admin_dashboard">Admin Dashboard</string>
+    <string name="admin_database_daily">Database Logs today</string>
+    <string name="admin_database_daily_count">0</string>
+    <string name="admin_statistics">Statistics</string>
+    <string name="admin_weekly_user_logins">Weekly User Logins</string>
+    <string name="admin_weekly_user_login_count">30</string>
+    <string name="admin_weekly_orders">Orders Weekly</string>
+    <string name="admin_weekly_order_count">189</string>
+    <string name="admin_monthly_registered_companies">Monthly Registered Companies</string>
+    <string name="admin_monthly_registered_company_count">87</string>
+    <string name="admin_monthly_registered_drivers">Monthly Registered Drivers</string>
+    <string name="admin_monthly_registered_driver_count">147</string>
+    <string name="admin_charts">Charts</string>
+    <string name="admin_monthly_orders_status_pie_chart">Order Status Pie Chart</string>
+    <string name="admin_monthly_orders_status_pie_chart_total_orders">Monthly Orders: </string>
+    <string name="admin_monthly_orders_status_pie_chart_total_order_count">3139</string>
+    <string name="admin_monthly_users_registered_chart">Users Registered Bar Chart</string>
+    <string name="admin_monthly_users_registered_chart_total_users">Monthly User Registrations: </string>
+    <string name="admin_monthly_users_registered_chart_total_user_count">613</string>
+    <string name="admin_monthly_companies_registered_line_chart">Companies Registered Line Chart</string>
+    <string name="admin_monthly_company_registered_line_chart_total_companies">Monthly Company Registrations: </string>
+    <string name="admin_monthly_companies_registered_line_chart_total_company_count">135</string>
+    <string name="admin_monthly_downtime_reports_bar_chart">Downtime Reports Bar Chart</string>
+    <string name="admin_monthly_downtime_reports_bar_total_reports">Monthly Downtime Reports: </string>
+    <string name="admin_monthly_downtime_reports_bar_total_report_count">613</string>
+
+    <string name="admin_security">Security</string>
+    <string name="admin_security_backup_database">Backup Database</string>
+    <string name="admin_security_backup">Backup</string>
+    <string name="admin_security_approvals">Approvals</string>
+    <string name="admin_security_new_company_approvals">New Company Approvals</string>
+    <string name="admin_security_company_approvals">Company Recruiting</string>
+    <string name="admin_security_company_user_approvals">Company Hire User Approvals</string>
+    <string name="admin_security_company_driver_approvals">Company Hire Driver Approvals</string>
+
+    <string name="admin_search_companies">Search Companies</string>
+    <string name="admin_search_drivers">Search Drivers</string>
+    <string name="admin_search_users">Search Users</string>
+    <string name="company_industry">Industry</string>
+
+    <string name="menu_contact_admin">Contact Admin</string>
+    <string name="api_key">AIzaSyC36Z0qoWgmY2BL2EBL0E9JVgvf9M3AQis</string>
+
+    <string name="set_start_location">Set Start Location</string>
+</resources>

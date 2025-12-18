@@ -1,0 +1,406 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nested_scroll_user_past_order"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".user.history.UserPastOrderFragment">
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/userPastOrderConstraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/cover_blue"
+    tools:context=".user.history.UserPastOrderFragment" >
+
+    <TextView
+        android:id="@+id/userPastOrderHistoryTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/lato"
+        android:text="@string/user_past_order"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/userPastOrderDetailsTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/lato"
+        android:text="@string/user_past_order_details"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/userPastOrderHistoryTextView"
+        app:layout_constraintStart_toStartOf="@+id/userPastOrderHistoryTextView"
+        app:layout_constraintTop_toBottomOf="@+id/userPastOrderHistoryTextView" />
+
+    <ImageView
+        android:id="@+id/pastUserOrderDetailsCollapsible"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/ic_arrow_up"
+        app:layout_constraintBottom_toBottomOf="@+id/userPastOrderDetailsTextView"
+        app:layout_constraintEnd_toEndOf="@+id/userPastOrderHistoryTextView"
+        app:layout_constraintStart_toEndOf="@+id/userPastOrderDetailsTextView"
+        app:layout_constraintTop_toTopOf="@+id/userPastOrderDetailsTextView" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/pastUserOrderDetailsFillerConstraint"
+        android:layout_width="0dp"
+        android:layout_height="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/userPastOrderDetailsTextView">
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/userPastOrderDetailsConstraintLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pastUserOrderDetailsFillerConstraint">
+
+        <TextView
+            android:id="@+id/pastUserOrderTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="16dp"
+            android:fontFamily="@font/lato"
+            android:text="@string/user_past_order_id"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toStartOf="@+id/pastUserOrderIdTextView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/pastUserOrderIdTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="40dp"
+            android:fontFamily="@font/lato"
+            android:text="@string/user_past_order_value"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/pastUserOrderTextView"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/pastUserOrderDriverTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/lato"
+            android:text="@string/user_past_order_driver_id"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="@+id/pastUserOrderTextView"
+            app:layout_constraintStart_toStartOf="@+id/pastUserOrderTextView"
+            app:layout_constraintTop_toBottomOf="@+id/pastUserOrderTextView" />
+
+        <TextView
+            android:id="@+id/pastUserDriverOrderIdTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/lato"
+            android:text="@string/user_past_order_driver_value"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="@+id/pastUserOrderIdTextView"
+            app:layout_constraintStart_toStartOf="@+id/pastUserOrderIdTextView"
+            app:layout_constraintTop_toBottomOf="@+id/pastUserOrderIdTextView" />
+
+        <TextView
+            android:id="@+id/pastUserPayloadTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/lato"
+            android:text="@string/user_past_order_payload_id"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="@+id/pastUserOrderDriverTextView"
+            app:layout_constraintStart_toStartOf="@+id/pastUserOrderDriverTextView"
+            app:layout_constraintTop_toBottomOf="@+id/pastUserOrderDriverTextView" />
+
+        <TextView
+            android:id="@+id/pastUserPayloadIdTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/lato"
+            android:text="@string/user_past_order_payload_value"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="@+id/pastUserDriverOrderIdTextView"
+            app:layout_constraintStart_toStartOf="@+id/pastUserDriverOrderIdTextView"
+            app:layout_constraintTop_toBottomOf="@+id/pastUserDriverOrderIdTextView" />
+
+        <TextView
+            android:id="@+id/userPastOrderPriceTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/lato"
+            android:text="@string/user_past_order_price"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="@+id/pastUserPayloadTextView"
+            app:layout_constraintStart_toStartOf="@+id/pastUserPayloadTextView"
+            app:layout_constraintTop_toBottomOf="@+id/pastUserPayloadTextView" />
+
+        <TextView
+            android:id="@+id/userPastOrderPriceValueTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/lato"
+            android:text="@string/user_past_order_price_value"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="@+id/pastUserPayloadIdTextView"
+            app:layout_constraintStart_toStartOf="@+id/pastUserPayloadIdTextView"
+            app:layout_constraintTop_toBottomOf="@+id/pastUserPayloadIdTextView" />
+
+        <TextView
+            android:id="@+id/userPastOrderStartLocationTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/lato"
+            android:text="@string/user_past_order_start_location"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="@+id/userPastOrderPriceTextView"
+            app:layout_constraintStart_toStartOf="@+id/userPastOrderPriceTextView"
+            app:layout_constraintTop_toBottomOf="@+id/userPastOrderPriceTextView" />
+
+        <TextView
+            android:id="@+id/userPastOrderStartLocationValueTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/lato"
+            android:text="@string/user_past_order_start_location_value"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="@+id/userPastOrderPriceValueTextView"
+            app:layout_constraintStart_toStartOf="@+id/userPastOrderPriceValueTextView"
+            app:layout_constraintTop_toBottomOf="@+id/userPastOrderPriceValueTextView" />
+
+        <TextView
+            android:id="@+id/userPastOrderEndLocationTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/lato"
+            android:text="@string/user_past_order_end_location"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="@+id/userPastOrderStartLocationTextView"
+            app:layout_constraintStart_toStartOf="@+id/userPastOrderStartLocationTextView"
+            app:layout_constraintTop_toBottomOf="@+id/userPastOrderStartLocationTextView" />
+
+        <TextView
+            android:id="@+id/userPastOrderEndLocationValueTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/lato"
+            android:text="@string/user_past_order_end_location_value"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="@+id/userPastOrderStartLocationValueTextView"
+            app:layout_constraintStart_toStartOf="@+id/userPastOrderStartLocationValueTextView"
+            app:layout_constraintTop_toBottomOf="@+id/userPastOrderStartLocationValueTextView" />
+
+        <TextView
+            android:id="@+id/userPastOrderStartDateTimeTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lato"
+            android:text="@string/user_past_order_start_datetime"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/userPastOrderStartDateTimeValueTextView"
+            app:layout_constraintEnd_toEndOf="@+id/userPastOrderEndLocationTextView"
+            app:layout_constraintStart_toStartOf="@+id/userPastOrderEndLocationTextView"
+            app:layout_constraintTop_toTopOf="@+id/userPastOrderStartDateTimeValueTextView" />
+
+        <TextView
+            android:id="@+id/userPastOrderStartDateTimeValueTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/lato"
+            android:text="@string/user_past_order_start_datetime_value"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="@+id/userPastOrderEndLocationValueTextView"
+            app:layout_constraintStart_toStartOf="@+id/userPastOrderEndLocationValueTextView"
+            app:layout_constraintTop_toBottomOf="@+id/userPastOrderEndLocationValueTextView" />
+
+        <TextView
+            android:id="@+id/userPastOrderEndDateTimeTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lato"
+            android:text="@string/user_past_order_end_datetime"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/userPastOrderEndDateTimeValueTextView"
+            app:layout_constraintEnd_toEndOf="@+id/userPastOrderStartDateTimeTextView"
+            app:layout_constraintStart_toStartOf="@+id/userPastOrderStartDateTimeTextView"
+            app:layout_constraintTop_toTopOf="@+id/userPastOrderEndDateTimeValueTextView" />
+
+        <TextView
+            android:id="@+id/userPastOrderEndDateTimeValueTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/lato"
+            android:text="@string/user_past_order_end_datetime_value"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="@+id/userPastOrderStartDateTimeValueTextView"
+            app:layout_constraintStart_toStartOf="@+id/userPastOrderStartDateTimeValueTextView"
+            app:layout_constraintTop_toBottomOf="@+id/userPastOrderStartDateTimeValueTextView" />
+
+        <Button
+            android:id="@+id/userSubmitRatingsButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="40dp"
+            android:layout_marginBottom="16dp"
+            android:backgroundTint="@color/lightbluegreen"
+            android:fontFamily="@font/lato"
+            android:text="@string/user_past_order_submit_ratings"
+            android:textSize="18sp"
+            app:cornerRadius="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/userOrderRatingBar" />
+
+        <RatingBar
+            android:id="@+id/userOrderRatingBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="@+id/userPastOrderEndDateTimeValueTextView"
+            app:layout_constraintStart_toStartOf="@+id/userPastOrderEndDateTimeTextView"
+            tools:layout_editor_absoluteY="358dp" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/userPastOrderItemDetailsTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/lato"
+        android:text="@string/user_past_order_item_details"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/userPastOrderHistoryTextView"
+        app:layout_constraintStart_toStartOf="@+id/userPastOrderHistoryTextView"
+        app:layout_constraintTop_toBottomOf="@+id/userPastOrderDetailsConstraintLayout" />
+
+    <ImageView
+        android:id="@+id/pastUserOrderItemDetailsCollapsible"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/ic_arrow_up"
+        app:layout_constraintBottom_toBottomOf="@+id/userPastOrderItemDetailsTextView"
+        app:layout_constraintEnd_toEndOf="@+id/userPastOrderHistoryTextView"
+        app:layout_constraintStart_toEndOf="@+id/userPastOrderItemDetailsTextView"
+        app:layout_constraintTop_toTopOf="@+id/userPastOrderItemDetailsTextView" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/pastUserOrderItemDetailsFillerConstraint"
+        android:layout_width="0dp"
+        android:layout_height="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/userPastOrderItemDetailsTextView">
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/pastUserOrderItemDetailsConstraintLayout"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:layout_marginBottom="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pastUserOrderItemDetailsFillerConstraint">
+
+        <TextView
+            android:id="@+id/userPastOrderQtyTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="16dp"
+            android:fontFamily="@font/lato"
+            android:text="@string/user_past_order_item_qty"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toStartOf="@+id/userPastOrderQtyValueTextView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/userPastOrderQtyValueTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="40dp"
+            android:fontFamily="@font/lato"
+            android:text="@string/user_past_order_item_qty_value"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/userPastOrderQtyTextView"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/userPastOrderESVTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/lato"
+            android:text="@string/user_past_order_item_esv"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="@+id/userPastOrderQtyTextView"
+            app:layout_constraintStart_toStartOf="@+id/userPastOrderQtyTextView"
+            app:layout_constraintTop_toBottomOf="@+id/userPastOrderQtyTextView" />
+
+        <TextView
+            android:id="@+id/userPastOrderItemESVValueTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lato"
+            android:text="@string/user_past_order_item_esv_value"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/userPastOrderESVTextView"
+            app:layout_constraintEnd_toEndOf="@+id/userPastOrderQtyValueTextView"
+            app:layout_constraintStart_toStartOf="@+id/userPastOrderQtyValueTextView"
+            app:layout_constraintTop_toTopOf="@+id/userPastOrderESVTextView" />
+
+        <TextView
+            android:id="@+id/pastUserOrderItems"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:fontFamily="@font/lato"
+            android:maxLines="4"
+            android:minLines="2"
+            android:text="@string/user_past_order_items"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/userPastOrderItemESVValueTextView"
+            app:layout_constraintStart_toStartOf="@+id/userPastOrderESVTextView"
+            app:layout_constraintTop_toBottomOf="@+id/userPastOrderESVTextView" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

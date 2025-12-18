@@ -1,0 +1,421 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nested_scroll_company_past_order"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".user.company.ExistingCompanyDriverProfileFragment">
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/existingCompanyDriverProfileConstraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/cover_blue"
+    tools:context=".user.company.ExistingCompanyDriverProfileFragment" >
+
+    <TextView
+        android:id="@+id/existingCompanyDriverProfileTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/lato"
+        android:text="@string/existing_company_driver_profile"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/existingCompanyDriverDetailsTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:fontFamily="@font/lato"
+        android:text="@string/existing_company_driver_details"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/existingCompanyDriverProfileTextView"
+        app:layout_constraintStart_toStartOf="@+id/existingCompanyDriverProfileTextView"
+        app:layout_constraintTop_toBottomOf="@+id/existingCompanyDriverProfileTextView" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/existingCompanyDriverDetailsFillerConstraint"
+        android:layout_width="0dp"
+        android:layout_height="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/existingCompanyDriverDetailsTextView">
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/existingCompanyDriverDetailConstraintLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/existingCompanyDriverDetailsFillerConstraint">
+
+        <ImageView
+            android:id="@+id/companyExistingDriverProfileImageView"
+            android:layout_width="92dp"
+            android:layout_height="92dp"
+            android:src="@drawable/ic_menu_profile"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/existingCompanyDriverFirstNameTextView"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/edit_text_border"
+            android:backgroundTint="@color/design_default_color_primary_variant"
+            android:ems="10"
+            android:fontFamily="@font/lato"
+            android:hint="@string/text1"
+            android:inputType="text"
+            android:padding="12dp"
+            android:textColorHint="@color/design_default_color_primary"
+            app:layout_constraintEnd_toStartOf="@+id/existingCompanyDriverLastNameTextView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/companyExistingDriverProfileImageView" />
+
+        <EditText
+            android:id="@+id/existingCompanyDriverLastNameTextView"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/edit_text_border"
+            android:backgroundTint="@color/design_default_color_primary_variant"
+            android:ems="10"
+            android:fontFamily="@font/lato"
+            android:hint="@string/text2"
+            android:inputType="text"
+            android:padding="12dp"
+            android:textColorHint="@color/design_default_color_primary"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/existingCompanyDriverFirstNameTextView"
+            app:layout_constraintTop_toBottomOf="@+id/companyExistingDriverProfileImageView" />
+
+        <EditText
+            android:id="@+id/existingCompanyDriverEmailTextView"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/edit_text_border"
+            android:backgroundTint="@color/design_default_color_primary_variant"
+            android:ems="10"
+            android:fontFamily="@font/lato"
+            android:hint="@string/text5"
+            android:inputType="textEmailAddress"
+            android:padding="12dp"
+            android:textColorHint="@color/design_default_color_primary"
+            app:layout_constraintEnd_toEndOf="@+id/existingCompanyDriverLastNameTextView"
+            app:layout_constraintStart_toStartOf="@+id/existingCompanyDriverFirstNameTextView"
+            app:layout_constraintTop_toBottomOf="@+id/existingCompanyDriverFirstNameTextView" />
+
+        <EditText
+            android:id="@+id/existingCompanyDriverMobileTextView"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/edit_text_border"
+            android:backgroundTint="@color/design_default_color_primary_variant"
+            android:ems="10"
+            android:fontFamily="@font/lato"
+            android:hint="@string/text3"
+            android:inputType="text"
+            android:padding="12dp"
+            android:textColorHint="@color/design_default_color_primary"
+            app:layout_constraintEnd_toEndOf="@+id/existingCompanyDriverEmailTextView"
+            app:layout_constraintStart_toStartOf="@+id/existingCompanyDriverEmailTextView"
+            app:layout_constraintTop_toBottomOf="@+id/existingCompanyDriverEmailTextView" />
+
+        <TextView
+            android:id="@+id/existingCompanyDriverDOBTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="8dp"
+            android:fontFamily="@font/lato"
+            android:text="@string/existing_company_driver_dob"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toStartOf="@+id/existingCompanyDriverDOBValueTextView"
+            app:layout_constraintStart_toStartOf="@+id/existingCompanyDriverMobileTextView"
+            app:layout_constraintTop_toBottomOf="@+id/existingCompanyDriverMobileTextView" />
+
+        <TextView
+            android:id="@+id/existingCompanyDriverDOBValueTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:fontFamily="@font/lato"
+            android:text="@string/existing_company_driver_dob_value"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/existingCompanyDriverDOBTextView"
+            app:layout_constraintEnd_toEndOf="@+id/existingCompanyDriverMobileTextView"
+            app:layout_constraintStart_toEndOf="@+id/existingCompanyDriverDOBTextView"
+            app:layout_constraintTop_toTopOf="@+id/existingCompanyDriverDOBTextView" />
+
+        <TextView
+            android:id="@+id/existingCompanyDriverJoinedDatetimeTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:layout_marginBottom="24dp"
+            android:fontFamily="@font/lato"
+            android:text="@string/existing_company_driver_member_since"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/existingCompanyDriverDOBTextView"
+            app:layout_constraintStart_toStartOf="@+id/existingCompanyDriverDOBTextView"
+            app:layout_constraintTop_toBottomOf="@+id/existingCompanyDriverRatingTextView" />
+
+        <TextView
+            android:id="@+id/existingCompanyDriverJoinedDatetimeValueTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lato"
+            android:text="@string/existing_company_driver_member_since_datetime"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/existingCompanyDriverJoinedDatetimeTextView"
+            app:layout_constraintEnd_toEndOf="@+id/existingCompanyDriverDOBValueTextView"
+            app:layout_constraintStart_toStartOf="@+id/existingCompanyDriverDOBValueTextView"
+            app:layout_constraintTop_toTopOf="@+id/existingCompanyDriverJoinedDatetimeTextView" />
+
+        <TextView
+            android:id="@+id/existingCompanyDriverRatingTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:fontFamily="@font/lato"
+            android:text="@string/existing_company_driver_rating"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="@+id/existingCompanyDriverDOBTextView"
+            app:layout_constraintStart_toStartOf="@+id/existingCompanyDriverDOBTextView"
+            app:layout_constraintTop_toBottomOf="@+id/existingCompanyDriverDOBTextView" />
+
+        <TextView
+            android:id="@+id/existingCompanyDriverRatingValueTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lato"
+            android:text="@string/existing_company_driver_rating_value"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/existingCompanyDriverRatingTextView"
+            app:layout_constraintEnd_toEndOf="@+id/existingCompanyDriverDOBValueTextView"
+            app:layout_constraintStart_toStartOf="@+id/existingCompanyDriverDOBValueTextView"
+            app:layout_constraintTop_toTopOf="@+id/existingCompanyDriverRatingTextView" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/existingCompanyDriverVehicleDetailsTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:fontFamily="@font/lato"
+        android:text="@string/existing_company_vehicle_details"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/existingCompanyDriverDetailsTextView"
+        app:layout_constraintStart_toStartOf="@+id/existingCompanyDriverDetailsTextView"
+        app:layout_constraintTop_toBottomOf="@+id/existingCompanyDriverDetailConstraintLayout" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/existingCompanyDriverVehicleDetailsConstraint"
+        android:layout_width="0dp"
+        android:layout_height="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/existingCompanyDriverVehicleDetailsTextView">
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/existingCompanyDriverVehicleDetailConstraintLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/existingCompanyDriverVehicleDetailsConstraint">
+
+        <TextView
+            android:id="@+id/existingCompanyDriverPlateTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="8dp"
+            android:fontFamily="@font/lato"
+            android:text="@string/existing_company_vehicle_driver_plate"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toStartOf="@+id/existingCompanyDriverPlateValueTextView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/existingCompanyDriverPlateValueTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="32dp"
+            android:fontFamily="@font/lato"
+            android:text="@string/existing_company_vehicle_driver_plate_value"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/existingCompanyDriverPlateTextView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/existingCompanyDriverPlateTextView"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/existingCompanyDriverVehicleTitleTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/lato"
+            android:text="@string/existing_company_driver_vehicle_title"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="@+id/existingCompanyDriverPlateTextView"
+            app:layout_constraintStart_toStartOf="@+id/existingCompanyDriverPlateTextView"
+            app:layout_constraintTop_toBottomOf="@+id/existingCompanyDriverPlateTextView" />
+
+        <TextView
+            android:id="@+id/existingCompanyDriverVehicleTitleValueTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lato"
+            android:text="@string/existing_company_driver_vehicle_title_value"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/existingCompanyDriverVehicleTitleTextView"
+            app:layout_constraintEnd_toEndOf="@+id/existingCompanyDriverPlateValueTextView"
+            app:layout_constraintStart_toStartOf="@+id/existingCompanyDriverPlateValueTextView"
+            app:layout_constraintTop_toTopOf="@+id/existingCompanyDriverVehicleTitleTextView" />
+
+        <TextView
+            android:id="@+id/existingCompanyDriverVehicleBrandTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/lato"
+            android:text="@string/existing_company_driver_vehicle_brand"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="@+id/existingCompanyDriverVehicleTitleTextView"
+            app:layout_constraintStart_toStartOf="@+id/existingCompanyDriverVehicleTitleTextView"
+            app:layout_constraintTop_toBottomOf="@+id/existingCompanyDriverVehicleTitleTextView" />
+
+        <TextView
+            android:id="@+id/existingCompanyDriverVehicleBrandValueTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lato"
+            android:text="@string/existing_company_driver_vehicle_brand_value"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/existingCompanyDriverVehicleBrandTextView"
+            app:layout_constraintEnd_toEndOf="@+id/existingCompanyDriverVehicleTitleValueTextView"
+            app:layout_constraintStart_toStartOf="@+id/existingCompanyDriverVehicleTitleValueTextView"
+            app:layout_constraintTop_toTopOf="@+id/existingCompanyDriverVehicleBrandTextView" />
+
+        <TextView
+            android:id="@+id/existingCompanyDriverVehicleModelTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/lato"
+            android:text="@string/existing_company_driver_vehicle_model"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="@+id/existingCompanyDriverVehicleBrandTextView"
+            app:layout_constraintStart_toStartOf="@+id/existingCompanyDriverVehicleBrandTextView"
+            app:layout_constraintTop_toBottomOf="@+id/existingCompanyDriverVehicleBrandTextView" />
+
+        <TextView
+            android:id="@+id/existingCompanyDriverVehicleModelValueTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lato"
+            android:text="@string/existing_company_driver_vehicle_model_value"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/existingCompanyDriverVehicleModelTextView"
+            app:layout_constraintEnd_toEndOf="@+id/existingCompanyDriverVehicleBrandValueTextView"
+            app:layout_constraintStart_toStartOf="@+id/existingCompanyDriverVehicleBrandValueTextView"
+            app:layout_constraintTop_toTopOf="@+id/existingCompanyDriverVehicleModelTextView" />
+
+        <TextView
+            android:id="@+id/existingCompanyDriverVehicleTypeTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="24dp"
+            android:fontFamily="@font/lato"
+            android:text="@string/existing_company_driver_vehicle_type"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/existingCompanyDriverVehicleModelTextView"
+            app:layout_constraintStart_toStartOf="@+id/existingCompanyDriverVehicleModelTextView"
+            app:layout_constraintTop_toBottomOf="@+id/existingCompanyDriverVehicleModelTextView" />
+
+        <TextView
+            android:id="@+id/existingCompanyDriverVehicleTypeValueText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lato"
+            android:text="@string/existing_company_driver_vehicle_type_value"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/existingCompanyDriverVehicleTypeTextView"
+            app:layout_constraintEnd_toEndOf="@+id/existingCompanyDriverVehicleModelValueTextView"
+            app:layout_constraintStart_toStartOf="@+id/existingCompanyDriverVehicleModelValueTextView"
+            app:layout_constraintTop_toTopOf="@+id/existingCompanyDriverVehicleTypeTextView" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/existingCompanyDriverDetailsCollapsible"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="16dp"
+        android:src="@drawable/ic_arrow_up"
+        app:layout_constraintBottom_toTopOf="@+id/existingCompanyDriverDetailsFillerConstraint"
+        app:layout_constraintEnd_toEndOf="@+id/existingCompanyDriverProfileTextView"
+        app:layout_constraintStart_toEndOf="@+id/existingCompanyDriverDetailsTextView"
+        app:layout_constraintTop_toTopOf="@+id/existingCompanyDriverDetailsTextView" />
+
+    <ImageView
+        android:id="@+id/existingCompanyDriverVehicleDetailsCollapsible"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="32dp"
+        android:src="@drawable/ic_arrow_up"
+        app:layout_constraintBottom_toTopOf="@+id/existingCompanyDriverVehicleDetailsConstraint"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/existingCompanyDriverVehicleDetailsTextView"
+        app:layout_constraintTop_toTopOf="@+id/existingCompanyDriverVehicleDetailsTextView" />
+
+    <Button
+        android:id="@+id/existingCompanyDriverDeleteButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:backgroundTint="@color/scarlet"
+        android:fontFamily="@font/lato"
+        android:text="@string/delete_company_driver_button"
+        android:textSize="18sp"
+        app:cornerRadius="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/existingCompanyDriverDetailsCollapsible"
+        app:layout_constraintStart_toStartOf="@+id/existingCompanyDriverDetailsTextView"
+        app:layout_constraintTop_toBottomOf="@+id/existingCompanyDriverVehicleDetailConstraintLayout" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>
